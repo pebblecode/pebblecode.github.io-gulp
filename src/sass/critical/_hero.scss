@@ -1,0 +1,26 @@
+.hero {}
+
+.hero-inner {
+  color: white;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 30px;
+
+  @media screen and ( max-width: $medium ) {
+    padding: 120px $gutter * 2 30px
+  }
+}
+
+.hero-title {
+  @include text-shadow-lrg;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: $gamma;
+  line-height: 1.2;
+
+  @media screen and ( max-width: $medium ) {
+    font-size: $delta;
+  }
+}

@@ -1,0 +1,62 @@
+h1 {
+  font-size: $tera;
+  font-family: $brandon;
+  font-weight: $font-black;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: -1px;
+
+  @media screen and ( max-width: $large + 300px ) {
+    font-size: $giga;
+    font-size: 9vw;
+  }
+
+  @media screen and ( max-width: $medium ) {
+    font-size: $alpha;
+  }
+}
+
+h2 {
+  font-size: $mega;
+  font-size: $font-bold;
+
+  @media screen and ( max-width: $medium ) {
+    font-size: $alpha;
+  }
+}
+
+h3 {
+  font-size: $alpha;
+  font-size: $font-bold;
+
+  @media screen and ( max-width: $medium ) {
+    font-size: $alpha - 8px;
+  }
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  border-bottom: 2px solid rgba($primary, 0.2);
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    color: lighten($primary, 10);
+    border-bottom-color: rgba($primary, 0.4);
+  }
+}
+
+blockquote {
+  border-left: 10px solid $primary;
+  padding-left: 20px;
+  font-style: normal;
+  margin: 45px 30px;
+  color: $primary;
+  font-size: $gamma + 4px;
+
+  @media screen and ( max-width: $medium ) {
+    margin: 30px 0;
+  }
+}

@@ -1,0 +1,76 @@
+.gbl-head {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.gbl-head-inner {
+  padding: 40px $gutter * 2 20px;
+
+  @media screen and ( max-width: $medium + 100px ) {
+    padding: 20px 0 15px;
+  }
+}
+
+.gbl-head-logo {
+  @include sprite($logo-white);
+  transition: 0.2s;
+
+  @media screen and ( max-width: $medium + 100px ) {
+    margin-left: $gutter;
+  }
+}
+
+.gbl-head-nav {
+  top: 0;
+  position: absolute;
+  right: $gutter * 2;
+
+  @media screen and ( max-width: $medium + 100px ) {
+    position: relative;
+    top: 15px;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+.gbl-head-nav-item {
+  color: white;
+  display: block;
+  float: left;
+  padding: 45px 15px 18px;
+  color: rgba(white, 0.5);
+
+  @media screen and ( max-width: $medium + 100px ) {
+    float: none;
+    padding: 10px $gutter;
+  }
+}
+
+.gbl-head-btn {
+  @include hide-text;
+  display: none;
+  position: absolute;
+  margin: 0;
+  top: 10px;
+  right: $gutter - 5px;
+  height: 45px;
+  width: 45px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 rgba(black, 0.1);
+  transition: box-shadow 0.2s, opacity 0.2s;
+
+  &:after {
+    @include pseudo;
+    @include sprite($menu-grey);
+    top: 13px;
+    left: 13px;
+  }
+
+  @media screen and ( max-width: $medium + 100px ) {
+    display: block;
+  }
+}
