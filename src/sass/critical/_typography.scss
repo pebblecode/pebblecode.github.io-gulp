@@ -5,7 +5,7 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   line-height: 1;
-  letter-spacing: -1px;
+  letter-spacing: -2px;
 
   @media screen and ( max-width: $large + 300px ) {
     font-size: $giga;
@@ -13,25 +13,32 @@ h1 {
   }
 
   @media screen and ( max-width: $medium ) {
+    font-size: $mega;
+  }
+
+  @media screen and ( max-width: $small ) {
     font-size: $alpha;
   }
 }
 
+h2, h3 {
+  font-weight: $font-bold;
+  line-height: 1;
+}
+
 h2 {
-  font-size: $mega;
-  font-size: $font-bold;
+  font-size: $alpha;
 
   @media screen and ( max-width: $medium ) {
-    font-size: $alpha;
+    font-size: $alpha - 8px;
   }
 }
 
 h3 {
-  font-size: $alpha;
-  font-size: $font-bold;
+  font-size: $beta;
 
   @media screen and ( max-width: $medium ) {
-    font-size: $alpha - 8px;
+    font-size: $beta - 4px;
   }
 }
 
@@ -45,18 +52,5 @@ a {
     cursor: pointer;
     color: lighten($primary, 10);
     border-bottom-color: rgba($primary, 0.4);
-  }
-}
-
-blockquote {
-  border-left: 10px solid $primary;
-  padding-left: 20px;
-  font-style: normal;
-  margin: 45px 30px;
-  color: $primary;
-  font-size: $gamma + 4px;
-
-  @media screen and ( max-width: $medium ) {
-    margin: 30px 0;
   }
 }

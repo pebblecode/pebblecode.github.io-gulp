@@ -15,6 +15,7 @@
 
 .gbl-head-logo {
   @include sprite($logo-white);
+  border: none;
   transition: 0.2s;
 
   @media screen and ( max-width: $medium + 100px ) {
@@ -41,6 +42,7 @@
   display: block;
   float: left;
   padding: 45px 15px 18px;
+  border: none;
   color: rgba(white, 0.5);
 
   @media screen and ( max-width: $medium + 100px ) {
@@ -61,6 +63,7 @@
   background-color: white;
   border-radius: 50%;
   box-shadow: 0 4px 0 rgba(black, 0.1);
+  border: none;
   transition: box-shadow 0.2s, opacity 0.2s;
 
   &:after {

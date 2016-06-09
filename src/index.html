@@ -12,20 +12,159 @@
 
   @@include('./_includes/header.html')
 
-  <section class="hero pink-bg slash slash-shadow">
+  <section class="hero slash-shadow pink-bg">
     <div class="hero-inner grid">
       <h1 class="hero-title">We do Digital Innovation</h1>
       <p class="hero-subtitle">We help businesses propel their digital capability and enable innovation.</p>
+      <button class="hero-play-btn btn-play btn-block white-bg">Play Video</button>
     </div>
   </section>
 
-  <section class="photo slash slash-shadow slash-top">
-    <div class="photo-inner"></div>
+  <section class="photo-block photo-top">
+    <div class="photo" style="background-image: url(/img/features/couch.jpg)"></div>
+  </section>
+
+  <section class="intro-block block grey-bg slash-shadow slash-top slash-right">
+    <div class="block-inner grid">
+      <h2>Our Mission</h2>
+      <p>pebble {code} helps bold businesses to innovate, grow internal capabilities and create digital products that customers love. From start-ups to global enterprises our clients hire us for digital acceleration and innovation.</p>
+    </div>
+  </section>
+
+  <section id="clients" class="clients-block block slash-shadow">
+    <div class="block-inner grid">
+      <ul class="clients">
+        <li class="client col-1-4">
+          <span class="client-logo az-logo">AstraZeneca</span>
+        </li>
+        <li class="client col-1-4">
+          <span class="client-logo bybox-logo">Bybox</span>
+        </li>
+        <li class="client col-1-4">
+          <span class="client-logo express-logo">National Express</span>
+        </li>
+        <li class="client col-1-4">
+          <span class="client-logo vfs-logo">VotesForSchools</span>
+        </li>
+      </ul>
+      <button class="btn btn-lrg btn-center">Learn more</button>
+    </div>
+  </section>
+
+  <section class="block blue-bg slash-shadow slash-right">
+    <div class="intro-block block block-light">
+      <div class="block-inner grid">
+        <h2>Our Mission</h2>
+        <p>We’re good at harnessing the power of most complex tools and technology and applying these to solve business problems.</p>
+        <button class="btn btn-lrg btn-light btn-center">What we've Done</button>
+      </div>
+    </div>
+    <hr class="border-dark">
+    <div class="feature-block block block-light block-border-dark">
+      <div class="block-inner grid">
+        <div class="col-1-2">
+          <img src="/img/illustrations/chart.png" alt="">
+        </div>
+        <div class="col-1-2">
+          <h3>Cloud</h3>
+          <p>A great deal of the success of software projects lies in the correct identification of the problems to be solved.</p>
+        </div>
+      </div>
+    </div>
+    <div class="feature-block block block-dark">
+      <div class="block-inner grid">
+        <div class="col-1-2 text-right">
+          <h3>Cloud</h3>
+          <p>A great deal of the success of software projects lies in the correct identification of the problems to be solved.</p>
+        </div>
+        <div class="col-1-2">
+          <img src="/img/illustrations/chart.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="feature-block block block-light">
+      <div class="block-inner grid">
+        <div class="col-1-2">
+          <img src="/img/illustrations/chart.png" alt="">
+        </div>
+        <div class="col-1-2">
+          <h3>Cloud</h3>
+          <p>A great deal of the success of software projects lies in the correct identification of the problems to be solved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-block">
+    <div class="photo" style="background-image: url(/img/features/couch.jpg)"></div>
+  </section>
+
+  <section class="product-block intro-block block slash-shadow slash-top">
+    <div class="block-inner grid">
+      <img class="product-img" src="/img/illustrations/people.png" alt="">
+      <h2 class="product-title pink-text">Hack Days</h2>
+      <p class="pink-text">pebble {code} helps bold businesses to innovate, grow internal capabilities and create digital products that customers love. From start-ups to global enterprises our clients hire us for digital acceleration and innovation.</p>
+      <a class="btn btn-lrg btn-center">Sign Up Now</a>
+    </div>
+  </section>
+  <section class="card-block block grey-bg">
+    <div class="block-inner grid">
+      <h2 class="text-center">Recent Posts</h2>
+      <div class="card col-1-3">
+        <img class="card-img" src="/img/features/couch.jpg" alt="">
+        <div class="card-inner">
+          <h3 class="card-title">Conquering PageSpeed with Jekyll</h3>
+          <div class="meta">
+            <span class="meta-author">Ian Black</span>
+            <span class="meta-date">May 31, 2016</span>
+          </div>
+          <div class="tags">
+            <a class="btn btn-grey tag">Hacks</a>
+          </div>
+          <a class="btn">Read Post</a>
+        </div>
+      </div>
+      <div class="card col-1-3">
+
+      </div>
+    </div>
+
   </section>
 
   @@include('./_includes/footer.html')
 
-  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/vendor/scrollReveal.min.js"></script>
+  <script>window.sr = new scrollReveal();</script>
   <script src="js/main.js"></script>
+
+  <script>
+  // Home - change header colour
+  var headerContainer = $('.gbl-head');
+  if ($(headerContainer).length > 0) {
+    var clients;
+
+    var scrollPositions = function () {
+      clients = $('#clients');
+    };
+
+    var headerBG = function () {
+      var windowTop = $(window).scrollTop();
+      if (windowTop > clients.offset().top || clients.offset().bottom) {
+        headerContainer.css({'background-color':'#0ea2dc'});
+      } else {
+        headerContainer.css({'background-color':'#ed4f7e'});
+      }
+    };
+
+    $(window).resize(scrollPositions).scroll(headerBG);
+    scrollPositions();
+    headerBG();
+  }
+  </script>
 </body>
 </html>

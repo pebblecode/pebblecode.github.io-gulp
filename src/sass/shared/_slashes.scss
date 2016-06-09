@@ -4,19 +4,30 @@
   top: auto;
   left: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .slash {
   position: relative;
 
+  * {
+    position: relative;
+    z-index: 2;
+  }
+
+  .block:last-child {
+    padding-bottom: 0;
+  }
+
   &::after {
+    background-color: white;
     transform: rotate(2deg) scale(1.2);
     bottom: -20px;
     height: 50px;
   }
 
   &.slash-top::after {
-    top: 20px;
+    top: -20px;
     bottom: auto;
   }
 
@@ -34,6 +45,8 @@
 }
 
 .slash-shadow {
+  @extend .slash;
+
   &::before {
     background-color: rgba(black, 0.15);
     transform: rotate(2deg) scale(1.2);
@@ -42,7 +55,7 @@
   }
 
   &.slash-top::before {
-    top: 20px;
+    top: -35px;
     bottom: auto;
   }
 

@@ -1,0 +1,17 @@
+.card-block {
+
+}
+
+.card {
+  background: white;
+  box-shadow: $box-shadow;
+}
+
+.card-inner {
+}
+
+.card-img {
+  position: relative;
+  width: calc(100% + 40px);
+  left: -20px;
+}

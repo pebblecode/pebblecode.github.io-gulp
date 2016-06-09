@@ -1,0 +1,74 @@
+.btn, button {
+  -webkit-font-smoothing: subpixel-antialiased;
+  background: none;
+  -webkit-appearance: none;
+  transition: 0.2s;
+  line-height: 1;
+  color: $ink;
+  position: relative;
+  padding: 10px 15px 7px;
+  border: 2px solid rgba($ink, 0.2);
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: $zeta - 2px;
+
+  &:hover {
+    color: $primary;
+    border-color: rgba($primary, 0.2);
+  }
+
+  &:focus { outline: none; }
+}
+
+.btn-light {
+  color: rgba(white, 0.9);
+  border-color: rgba(white, 0.2);
+
+  &:hover {
+    color: white;
+    border-color: rgba(white, 0.6);
+  }
+}
+
+.btn-lrg {
+  padding: 15px 30px 13px;
+  font-size: $zeta;
+}
+
+.btn-center {
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-block {
+  border: none;
+  box-shadow: 0 2px 4px rgba(black, 0.2);
+}
+
+.btn-play {
+  @include hide-text;
+  box-shadow: 0 4px 6px rgba(black, 0.2);
+  color: transparent;
+  width: 80px;
+  height: 80px;
+
+  @media screen and ( max-width: $medium ) {
+    width: 65px;
+    height: 65px;
+  }
+
+  &::after {
+    @include pseudo;
+    @include sprite($vimeo-pink);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    color: transparent;
+    transform: scale(1.1);
+  }
+}

@@ -1,61 +1,61 @@
 //===============================================================================
 // CLIENTS
 //===============================================================================
-.client-container {
-  padding-bottom: 20px;
-  background-color: lighten($ink, 45);
-  background-color: white;
-
-  @media screen and ( max-width: $medium ) {
-    padding-bottom: 10px;
-  }
-}
-
-.client-inner {
-  position: relative;
-  z-index: 2;
-}
-
-.client-item {
-  height: 110px;
-  position: relative;
-  margin-top: -15px;
+.clients-block {
+  padding-left: $gutter * 4;
+  padding-right: $gutter * 4;
 
   @media screen and ( max-width: $large ) {
-    width: 33.33%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  @media screen and ( max-width: $medium ) {
-    float: left;
-    width: 50%;
-    transform: scale(0.9);
-    margin-top: -20px;
+  &.slash.block {
+    padding-bottom: 15px;
+  }
+}
+
+.clients {
+  @include clearfix;
+  position: relative;
+  padding: 0 $gutter;
+
+  .bybox-logo {
+    left: 25px;
   }
 
-  @media screen and ( max-width: $small ) {
-    transform: scale(0.8);
+  @media screen and ( max-width: $large ) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    .client {
+      float: none;
+      display: inline-block;
+      width: 200px;
+    }
+
+    .vfs-logo {
+      width: 230px;
+    }
   }
+}
+
+.client {
+  height: 110px;
+  position: relative;
 }
 
 .client-logo {
-  color: transparent;
-  font-size: 1px;
+  @include hide-text;
+  overflow: visible;
 
   &::after {
     @include pseudo;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 0;
   }
 
-  &.az-logo {
-    &::after { @include sprite($az-logo); }
-
-    @media screen and ( max-width: $small ) {
-      transform: scale(0.7);
-    }
-  }
-
+  &.az-logo::after { @include sprite($az-logo); }
   &.pearson-logo::after { @include sprite($pearson-logo); }
   &.bede-logo::after { @include sprite($bede-logo); }
   &.cancer-logo::after { @include sprite($cancer-logo); }
@@ -63,4 +63,5 @@
   &.lloyds-logo::after { @include sprite($lloyds-logo); }
   &.bybox-logo::after { @include sprite($bybox-logo); }
   &.express-logo::after { @include sprite($express-logo); }
+  &.vfs-logo::after { @include sprite($vfs-logo); }
 }

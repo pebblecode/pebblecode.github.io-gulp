@@ -88,7 +88,7 @@ $help-black: 28px 25px $error-sprite-path 0 0;
 }
 
 .error-help-btn {
-  @include icon;
+  @include hide-text;
   background-color: white;
   position: absolute;
   top: 0;

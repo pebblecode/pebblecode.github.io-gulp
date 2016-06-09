@@ -199,7 +199,6 @@
 
   .rt-btn {
     @extend .btn;
-    @extend .btn-primary;
     @extend .btn-block;
     margin: $gutter * 2 auto 0;
     display: table;
