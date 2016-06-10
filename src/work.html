@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>about</title>
+  <title>Work</title>
 
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -165,7 +165,7 @@
     </div>
   </section>
 
-  <section class="intro-block block block-clear block-light slash-shadow aqua-bg">
+  <section id="why" class="intro-block block block-clear block-light slash-shadow aqua-bg">
     <div class="block-inner grid">
       <h2>Build, Measure and Learn</h2>
       <p>We help businesses propel their digital capability and enable innovation.</p>
@@ -177,7 +177,44 @@
     <div class="photo" style="background-image: url(/img/features/couch.jpg)"></div>
   </section>
 
-  <footer class="gbl-foot">
+  <section id="industry" class="card-block block blue-bg slash-shadow slash-top slash-right block-light">
+    <div class="block-inner grid">
+      <h2 class="text-center">Industry Innovation</h2>
+      <p class="text-center"><br></p>
+      <div class="card col-1-3">
+        <a class="card-link">
+          <img src="img/industry/health-ball.svg" alt="" class="card-ball">
+          <h3 class="card-title text-center">Health</h3>
+          <p class="card-excerpt text-center">Precision medicine, patient centricity, smart research.</p>
+        </a>
+        <a class="card-btn text-center">
+          <button class="btn btn-light btn-arrow">Learn more</button>
+        </a>
+      </div>
+      <div class="card col-1-3">
+        <a class="card-link">
+          <img src="img/industry/transport-ball.svg" alt="" class="card-ball">
+          <h3 class="card-title text-center">Transport</h3>
+          <p class="card-excerpt text-center">Customer satisfaction, smart ticketing, internet of things.</p>
+        </a>
+        <a class="card-btn text-center">
+          <button class="btn btn-light btn-arrow">Learn more</button>
+        </a>
+      </div>
+      <div class="card col-1-3">
+        <a class="card-link">
+          <img src="img/industry/insurance-ball.svg" alt="" class="card-ball">
+          <h3 class="card-title text-center">Insurance</h3>
+          <p class="card-excerpt text-center">Internet of Things, cyber-security, speed to market.</p>
+        </a>
+        <a class="card-btn text-center">
+          <button class="btn btn-light btn-arrow">Learn more</button>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="gbl-foot blue-bg gbl-foot-light">
     <div class="gbl-foot-inner grid">
       <ul class="gbl-foot-links">
         <li><a href="tel:+442033273940">+44 (0) 20 3327 3940</a></li>
@@ -202,16 +239,20 @@
   // Home - change header colour
   var headerContainer = $('.gbl-head');
   if ($(headerContainer).length > 0) {
-    var clients;
+    var why;
+    var industry;
 
     var scrollPositions = function () {
-      clients = $('#clients');
+      why = $('#why');
+      industry = $('#industry');
     };
 
     var headerBG = function () {
       var windowTop = $(window).scrollTop();
-      if (windowTop > clients.offset().top || clients.offset().bottom) {
+      if (windowTop > industry.offset().top - 200 || industry.offset().bottom) {
         headerContainer.css({'background-color':'#0ea2dc'});
+      } else if (windowTop > why.offset().top - 200 || why.offset().bottom) {
+        headerContainer.css({'background-color':'#37bec0'});
       } else {
         headerContainer.css({'background-color':'#0ea2dc'});
       }

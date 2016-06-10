@@ -1,9 +1,7 @@
 //===============================================================================
 // GLOBAL FOOTER
 //===============================================================================
-.gbl-foot {
-  background-color: white;
-}
+.gbl-foot {}
 
 .gbl-foot-inner {
   position: relative;
@@ -28,6 +26,10 @@
     bottom: 0;
     right: 0;
   }
+
+  .gbl-foot-light & {
+    color: rgba(white, 0.4);
+  }
 }
 
 .gbl-foot-links {
@@ -49,7 +51,17 @@
     border: none;
     padding: 0;
 
-    &:hover { color: rgba($pink, 0.8); }
+    &:hover {
+      color: rgba($pink, 0.8);
+    }
+
+    .gbl-foot-light & {
+      color: white;
+
+      &:hover {
+        color: rgba(white, 0.6);
+      }
+    }
   }
 }
 
@@ -81,5 +93,11 @@
     &.github { @include sprite($octocat-pink); }
     &.twitter { @include sprite($twitter-pink); }
     &.vimeo { @include sprite($vimeo-pink); }
+  }
+
+  .gbl-foot-light & {
+    .github { @include sprite($octocat-white); }
+    .twitter { @include sprite($twitter-white); }
+    .vimeo { @include sprite($vimeo-white); }
   }
 }

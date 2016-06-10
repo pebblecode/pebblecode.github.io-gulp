@@ -6,25 +6,23 @@
   line-height: 1;
   color: $ink;
   position: relative;
+  margin-right: 5px;
   padding: 10px 12px 7px 15px;
   border: 2px solid rgba($ink, 0.2);
   border-radius: 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: $zeta - 2px;
-  display: table;
+  display: inline-block;
 
   &:hover {
     color: $primary;
     border-color: lighten($primary, 30);
   }
 
-  & + & {
-    display: inline-block;
-    margin-left: 10px;
+  &:focus {
+    outline: none;
   }
-
-  &:focus { outline: none; }
 }
 
 .btn-arrow {
@@ -67,6 +65,7 @@
 .btn-lrg {
   padding: 15px 30px 13px;
   font-size: $zeta;
+  border-width: 3px;
 
   &.btn-arrow {
     padding-right: 37px;
