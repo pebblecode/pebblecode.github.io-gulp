@@ -7,24 +7,14 @@ var gulp = require('gulp'),
     gulpLivereload = require('gulp-livereload'),
     sass = require('gulp-sass'),
     prefix = require('gulp-autoprefixer'),
-    jshint = require('gulp-jshint'),
-    fileInclude = require('gulp-file-include');
+    jshint = require('gulp-jshint');
 
-var src = {
+var path = {
+   src: 'src/',
   html: 'src/**/*.html',
-  index: 'src/index.html',
-  js: 'src/js/*.js',
+    js: 'src/js/*.js',
   sass: 'src/sass/**/*.scss',
-  images: 'src/img/**/*',
-  fonts: 'src/fonts/**/*'
-}
-
-var site = {
-  root: 'site/',
-  js: 'site/js/',
-  css: 'site/css/',
-  images: 'site/img/',
-  fonts: 'site/fonts/'
+   css: 'src/css/',
 }
 
 var localPort = 4000,
@@ -34,51 +24,39 @@ gulp.task('server', function(){
   var server = connect();
 
   server.use(connectLivereload({port: lrPort}));
-  server.use(serveStatic(site.root));
+  server.use(serveStatic(path.src));
   server.listen(localPort);
 
   console.log("\nlocal server running at http://localhost:" + localPort + "/\n");
 });
 
 gulp.task('sass', function(){
-  gulp.src(src.sass)
+  gulp.src(path.sass)
     .pipe(sass({
-      outputStyle: [ 'compressed' ]
+      outputStyle: [ 'expanded' ],
+      sourceComments: 'normal'
     }).on('error', sass.logError))
     .pipe(prefix())
-    .pipe(gulp.dest(site.css))
+    .pipe(gulp.dest(path.css))
     .pipe(gulpLivereload());
 })
 
-gulp.task('js', function(){
-  gulp.src(src.js)
+gulp.task('jshint', function(){
+  gulp.src(path.js)
     .pipe(jshint())
     .pipe(jshint.reporter('default'))
-    .pipe(gulp.dest(site.js))
     .pipe(gulpLivereload());
 });
 
 gulp.task('html', function(){
-  gulp.src(src.index)
-    .pipe(fileInclude({
-      prefix: '@@',
-      basepath: '@file'
-    }))
-    .pipe(gulp.dest(site.root))
+  gulp.src(path.html)
     .pipe(gulpLivereload());
 });
 
-gulp.task('assets', function(){
-  gulp.src(src.images)
-    .pipe(gulp.dest(site.images));
-  gulp.src(src.fonts)
-    .pipe(gulp.dest(site.fonts));
-});
-
 gulp.task('watch', function(){
-  gulp.watch(src.sass, ['sass']);
-  gulp.watch(src.js, ['js']);
-  gulp.watch(src.html, ['html']);
+  gulp.watch(path.sass, ['sass']);
+  gulp.watch(path.js, ['jshint']);
+  gulp.watch(path.html, ['html']);
 
   gulpLivereload.listen();
 })

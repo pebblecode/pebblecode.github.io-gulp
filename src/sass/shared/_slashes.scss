@@ -47,19 +47,11 @@
 .slash-shadow {
   @extend .slash;
 
-  &::before {
-    background-color: rgba(black, 0.15);
-    transform: rotate(2deg) scale(1.2);
-    bottom: -35px;
-    height: 10px;
+  &::after {
+    box-shadow: 0 10px 0 rgba(black, 0.15);
   }
 
-  &.slash-top::before {
-    top: -35px;
-    bottom: auto;
-  }
-
-  &.slash-right::before {
-    transform: rotate(-2.1deg) scale(1.2);
+  &.slash-top::after {
+    box-shadow: 0 -10px 0 rgba(black, 0.15);
   }
 }

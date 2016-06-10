@@ -1,11 +1,11 @@
 {
-  "name": "barebones-gulp-project",
-  "version": "0.0.2",
-  "author": "Mark Durrant",
+  "name": "pebblecode.com-gulp",
+  "version": "0.1.0",
+  "author": "pebble {code}",
   "description": "gulp, localhost, livereload, sass, jshint",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pebblecode/pebble-gulp-base"
+    "url": "https://github.com/pebblecode/pebblecode.github.io-gulp"
   },
   "scripts": {
     "install": "gulp sass"
@@ -16,7 +16,6 @@
     "connect-livereload": "^0.5.4",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
-    "gulp-file-include": "^0.13.7",
     "gulp-jshint": "^2.0.0",
     "gulp-livereload": "^3.8.1",
     "gulp-sass": "^2.3.0",
