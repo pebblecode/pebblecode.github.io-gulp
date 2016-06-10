@@ -36,7 +36,7 @@
     @include pseudo;
     transform: rotate(-3deg) skew(-3deg, 0deg);
     width: 100%;
-    bottom: -10px;
+    bottom: -15px;
 
       @media screen and ( max-width: $medium ) {
         display: none;
@@ -45,7 +45,7 @@
 
 	&::before {
     transition: 0.2s;
-  	height: 20px;
+  	height: 25px;
   	box-shadow: -1px 1px 10px rgba(black, 0.12);
 	}
 
@@ -89,14 +89,26 @@
   background-size: cover;
 }
 
+.card-logo {
+  margin: $gutter $gutter -10px;
+  transform-origin: left;
+  transform: scale(0.8);
+}
+
 .card-title {
 	color: $primary;
-	padding: $gutter $gutter 0;
+	padding: 25px $gutter 0;
   transition: 0.2s;
 
   .card:hover & {
     color: darken($primary, 10);
   }
+}
+
+.card-excerpt {
+  padding: 0 $gutter;
+  margin-bottom: 0;
+  color: $ink;
 }
 
 .card-meta {
@@ -113,7 +125,7 @@
   position: relative;
   z-index: 1;
   display: block;
-  padding: $gutter * 2 $gutter $gutter;
+  padding: $gutter + 10px $gutter $gutter;
   margin-bottom: -50px;
   border: none;
 

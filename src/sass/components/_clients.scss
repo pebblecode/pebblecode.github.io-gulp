@@ -21,7 +21,7 @@
   padding: 0 $gutter;
 
   .bybox-logo {
-    left: 25px;
+    margin-left: 25px;
   }
 
   @media screen and ( max-width: $large ) {
@@ -44,24 +44,22 @@
 .client {
   height: 110px;
   position: relative;
+
+  .client-logo {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+  }
 }
 
 .client-logo {
-  @include hide-text;
-  overflow: visible;
-
-  &::after {
-    @include pseudo;
-    top: 0;
-  }
-
-  &.az-logo::after { @include sprite($az-logo); }
-  &.pearson-logo::after { @include sprite($pearson-logo); }
-  &.bede-logo::after { @include sprite($bede-logo); }
-  &.cancer-logo::after { @include sprite($cancer-logo); }
-  &.aljazeera-logo::after { @include sprite($aljazeera-logo); }
-  &.lloyds-logo::after { @include sprite($lloyds-logo); }
-  &.bybox-logo::after { @include sprite($bybox-logo); }
-  &.express-logo::after { @include sprite($express-logo); }
-  &.vfs-logo::after { @include sprite($vfs-logo); }
+  &.az-logo { @include sprite($az-logo); }
+  &.pearson-logo { @include sprite($pearson-logo); }
+  &.bede-logo { @include sprite($bede-logo); }
+  &.cancer-logo { @include sprite($cancer-logo); }
+  &.aljazeera-logo { @include sprite($aljazeera-logo); }
+  &.lloyds-logo { @include sprite($lloyds-logo); }
+  &.bybox-logo { @include sprite($bybox-logo); }
+  &.express-logo { @include sprite($express-logo); }
+  &.vfs-logo { @include sprite($vfs-logo); }
 }

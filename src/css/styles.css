@@ -742,8 +742,9 @@ dd {
   margin-left: 1.4em;
 }
 
-/* line 43, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/shared/_elements.scss */
+/* line 42, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/shared/_elements.scss */
 hr {
+  margin: 50px 0;
   border: 2px solid rgba(0, 0, 0, 0.08);
 }
 
@@ -869,13 +870,24 @@ hr {
   padding-bottom: 50px;
 }
 
-/* line 6, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 5, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+.block > .block {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* line 10, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+.slash:not(.slash-top) + .block, .slash-shadow:not(.slash-top) + .block {
+  padding-top: 100px;
+}
+
+/* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .block-light,
 .block-dark {
   color: white;
 }
 
-/* line 10, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 19, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .block-light h1, .block-light .product-title, .block-light h2, .block-light h3,
 .block-dark h1,
 .block-dark .product-title,
@@ -884,25 +896,42 @@ hr {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
 }
 
-/* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 24, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .block-dark {
   background-color: rgba(0, 0, 0, 0.08);
 }
 
-/* line 20, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 28, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+.block-clear {
+  z-index: 0;
+}
+
+/* line 31, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .block-clear.pink-bg {
   background: -webkit-linear-gradient(100deg, transparent 40%, #ed4f7e 40%), -webkit-linear-gradient(80deg, transparent 40%, rgba(237, 79, 126, 0.5) 40%);
   background: linear-gradient(-10deg, transparent 40%, #ed4f7e 40%), linear-gradient(10deg, transparent 40%, rgba(237, 79, 126, 0.5) 40%);
 }
 
-/* line 24, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 35, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+.block-clear.blue-bg {
+  background: -webkit-linear-gradient(100deg, transparent 40%, #0ea2dc 40%), -webkit-linear-gradient(80deg, transparent 40%, rgba(14, 162, 220, 0.5) 40%);
+  background: linear-gradient(-10deg, transparent 40%, #0ea2dc 40%), linear-gradient(10deg, transparent 40%, rgba(14, 162, 220, 0.5) 40%);
+}
+
+/* line 39, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+.block-clear.aqua-bg {
+  background: -webkit-linear-gradient(100deg, transparent 40%, #37bec0 40%), -webkit-linear-gradient(80deg, transparent 40%, rgba(55, 190, 192, 0.5) 40%);
+  background: linear-gradient(-10deg, transparent 40%, #37bec0 40%), linear-gradient(10deg, transparent 40%, rgba(55, 190, 192, 0.5) 40%);
+}
+
+/* line 43, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .block-clear.slash::after, .block-clear.slash-shadow::after {
   opacity: 0.92;
   bottom: 0;
-  height: 100%;
+  height: 80%;
 }
 
-/* line 32, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 51, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .intro-block .block-inner {
   text-align: center;
   padding-left: 60px;
@@ -910,66 +939,66 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
-  /* line 32, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+  /* line 51, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
   .intro-block .block-inner {
     padding-left: 20px;
     padding-right: 20px;
   }
 }
 
-/* line 43, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 62, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .intro-block p {
   font-size: 24px;
 }
 
 @media screen and (max-width: 700px) {
-  /* line 43, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+  /* line 62, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
   .intro-block p {
     font-size: 18px;
   }
 }
 
-/* line 51, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 70, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .intro-block .btn, .intro-block .rt-footer .rt-btn, .rt-footer .intro-block .rt-btn {
-  margin-top: 30px;
+  margin: 30px auto 0;
 }
 
-/* line 57, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
-.feature-block {
+/* line 76, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+.block.feature-block {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 
 @media screen and (max-width: 700px) {
-  /* line 57, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
-  .feature-block {
+  /* line 76, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+  .block.feature-block {
     padding-top: 40px;
     padding-bottom: 40px;
     text-align: center;
   }
-  /* line 66, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
-  .feature-block .text-right {
+  /* line 85, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+  .block.feature-block .text-right {
     text-align: center;
   }
 }
 
-/* line 71, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
-.feature-block [class*='col-'] {
+/* line 90, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+.block.feature-block [class*='col-'] {
   vertical-align: middle;
 }
 
-/* line 75, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
-.feature-block img {
+/* line 94, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+.block.feature-block img {
   margin: 10px 10%;
   width: 80%;
 }
 
-/* line 80, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
-.feature-block p {
+/* line 99, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+.block.feature-block p {
   font-size: 20px;
 }
 
-/* line 91, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 108, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .product-img {
   display: table;
   margin: -140px auto 30px;
@@ -977,7 +1006,7 @@ hr {
   max-width: 70%;
 }
 
-/* line 183, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 200, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .aside-container {
   clear: both;
   position: relative;
@@ -995,7 +1024,7 @@ hr {
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 183, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+  /* line 200, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
   .aside-container {
     margin: 70px 5%;
     width: 90%;
@@ -1003,7 +1032,7 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
-  /* line 183, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+  /* line 200, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
   .aside-container {
     background: white;
     width: calc(100% - 40px);
@@ -1014,7 +1043,7 @@ hr {
 }
 
 @media screen and (min-width: 700px) {
-  /* line 205, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+  /* line 222, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
   .aside-container:after {
     content: "";
     overflow: hidden;
@@ -1032,7 +1061,7 @@ hr {
   }
 }
 
-/* line 216, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 233, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .aside-container h3 {
   font-size: 42px;
   line-height: 1;
@@ -1040,25 +1069,25 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
-  /* line 216, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+  /* line 233, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
   .aside-container h3 {
     font-size: 38px;
   }
 }
 
-/* line 226, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 243, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .aside-container p {
   font-size: 22px;
 }
 
 @media screen and (max-width: 700px) {
-  /* line 226, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+  /* line 243, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
   .aside-container p {
     font-size: 20px;
   }
 }
 
-/* line 234, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
+/* line 251, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_blocks.scss */
 .aside-container .btn, .aside-container .rt-footer .rt-btn, .rt-footer .aside-container .rt-btn {
   margin-top: 30px;
   display: table;
@@ -1120,7 +1149,7 @@ hr {
   -webkit-transform: rotate(-3deg) skew(-3deg, 0deg);
           transform: rotate(-3deg) skew(-3deg, 0deg);
   width: 100%;
-  bottom: -10px;
+  bottom: -15px;
 }
 
 @media screen and (max-width: 700px) {
@@ -1134,7 +1163,7 @@ hr {
 .card::before {
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  height: 20px;
+  height: 25px;
   box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.12);
 }
 
@@ -1188,42 +1217,58 @@ hr {
 }
 
 /* line 92, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+.card-logo {
+  margin: 20px 20px -10px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+/* line 98, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-title {
   color: #ed4f7e;
-  padding: 20px 20px 0;
+  padding: 25px 20px 0;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-/* line 97, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 103, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card:hover .card-title {
   color: #e8215c;
 }
 
-/* line 102, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 108, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+.card-excerpt {
+  padding: 0 20px;
+  margin-bottom: 0;
+  color: #6b7482;
+}
+
+/* line 114, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-meta {
   color: #6b7482;
   padding: 0 20px 5px;
 }
 
-/* line 107, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 119, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-tags {
   padding: 0 20px;
   display: table;
 }
 
-/* line 112, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 124, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-btn {
   position: relative;
   z-index: 1;
   display: block;
-  padding: 40px 20px 20px;
+  padding: 30px 20px 20px;
   margin-bottom: -50px;
   border: none;
 }
 
 @media screen and (max-width: 700px) {
-  /* line 112, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+  /* line 124, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
   .card-btn {
     margin-bottom: 0;
   }
@@ -1245,25 +1290,32 @@ hr {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 10px;
+  display: table;
 }
 
-/* line 16, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 17, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn:hover, .rt-footer .rt-btn:hover, button:hover {
   color: #ed4f7e;
   border-color: #fbdae4;
 }
 
-/* line 21, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 22, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+.btn + .btn, .rt-footer .rt-btn + .btn, .rt-footer .btn + .rt-btn, .rt-footer .rt-btn + .rt-btn, button + .btn, .rt-footer button + .rt-btn, .btn + button, .rt-footer .rt-btn + button, button + button {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* line 27, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn:focus, .rt-footer .rt-btn:focus, button:focus {
   outline: none;
 }
 
-/* line 24, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 30, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-arrow {
   padding-right: 22px;
 }
 
-/* line 27, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 33, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-arrow::after {
   content: "";
   overflow: hidden;
@@ -1293,7 +1345,7 @@ hr {
   color: transparent;
 }
 
-/* line 37, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 43, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-arrow:hover::after {
   width: 8px;
   height: 12px;
@@ -1312,13 +1364,13 @@ hr {
   color: transparent;
 }
 
-/* line 43, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 49, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-light {
   color: rgba(255, 255, 255, 0.9);
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* line 47, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 53, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-light::after {
   width: 8px;
   height: 12px;
@@ -1336,13 +1388,13 @@ hr {
   color: transparent;
 }
 
-/* line 51, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 57, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-light:hover {
   color: white;
   border-color: rgba(255, 255, 255, 0.6);
 }
 
-/* line 55, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 61, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-light:hover::after {
   width: 8px;
   height: 12px;
@@ -1360,38 +1412,38 @@ hr {
   color: transparent;
 }
 
-/* line 61, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 67, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-lrg {
   padding: 15px 30px 13px;
   font-size: 12px;
 }
 
-/* line 65, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 71, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-lrg.btn-arrow {
   padding-right: 37px;
 }
 
-/* line 68, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 74, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-lrg.btn-arrow::after {
   -webkit-transform: translateY(-53%);
           transform: translateY(-53%);
   right: 12px;
 }
 
-/* line 75, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 81, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-center {
   display: table;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* line 81, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 87, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-block, .rt-footer .rt-btn {
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* line 86, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 92, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-play {
   color: transparent;
   overflow: hidden;
@@ -1417,14 +1469,14 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
-  /* line 86, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+  /* line 92, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
   .btn-play {
     width: 80px;
     height: 80px;
   }
 }
 
-/* line 98, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 104, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-play::after {
   content: "";
   overflow: hidden;
@@ -1451,7 +1503,7 @@ hr {
   color: transparent;
 }
 
-/* line 106, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
+/* line 112, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_buttons.scss */
 .btn-play:hover {
   color: transparent;
   -webkit-transform: scale(1.1);
@@ -1635,9 +1687,10 @@ hr {
 .blog .gbl-head-nav-item:last-child,
 .post .gbl-head-nav-item:last-child {
   color: white;
+  font-weight: 700;
 }
 
-/* line 57, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_header.scss */
+/* line 58, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_header.scss */
 .gbl-head-btn.active::after {
   width: 17px;
   height: 17px;
@@ -2144,7 +2197,7 @@ hr {
 
 /* line 23, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
 .clients .bybox-logo {
-  left: 25px;
+  margin-left: 25px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -2172,45 +2225,21 @@ hr {
   position: relative;
 }
 
-/* line 49, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo {
-  color: transparent;
-  overflow: hidden;
-  display: block;
-  background-repeat: no-repeat;
-  overflow: visible;
+/* line 48, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
+.client .client-logo {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -70%);
+          transform: translate(-50%, -70%);
 }
 
-/* line 22, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_mixins.scss */
-.client-logo:hover {
-  color: transparent;
-}
-
-/* line 26, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_mixins.scss */
-.client-logo:before {
-  content: "";
-  display: block;
-  width: 0;
-  height: 100%;
-}
-
-/* line 53, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo::after {
-  content: "";
-  overflow: hidden;
-  display: block;
-  position: absolute;
-  background-repeat: no-repeat;
-  top: 0;
-}
-
-/* line 58, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo.az-logo::after {
-  width: 219px;
-  height: 94px;
+/* line 56, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
+.client-logo.az-logo {
+  width: 205px;
+  height: 52px;
   background-repeat: no-repeat;
   background-image: url(../../../../img/client-sprite.svg);
-  background-position: -219px 0px;
+  background-position: -226px -15px;
   color: transparent;
   overflow: hidden;
   display: block;
@@ -2218,17 +2247,53 @@ hr {
 }
 
 /* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
-.client-logo.az-logo::after:hover {
+.client-logo.az-logo:hover {
+  color: transparent;
+}
+
+/* line 57, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
+.client-logo.pearson-logo {
+  width: 170px;
+  height: 28px;
+  background-repeat: no-repeat;
+  background-image: url(../../../../img/client-sprite.svg);
+  background-position: -463px -33px;
+  color: transparent;
+  overflow: hidden;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+/* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
+.client-logo.pearson-logo:hover {
+  color: transparent;
+}
+
+/* line 58, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
+.client-logo.bede-logo {
+  width: 114px;
+  height: 55px;
+  background-repeat: no-repeat;
+  background-image: url(../../../../img/client-sprite.svg);
+  background-position: -272px -113px;
+  color: transparent;
+  overflow: hidden;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+/* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
+.client-logo.bede-logo:hover {
   color: transparent;
 }
 
 /* line 59, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo.pearson-logo::after {
-  width: 219px;
-  height: 94px;
+.client-logo.cancer-logo {
+  width: 162px;
+  height: 64px;
   background-repeat: no-repeat;
   background-image: url(../../../../img/client-sprite.svg);
-  background-position: -439px 0px;
+  background-position: -246px -205px;
   color: transparent;
   overflow: hidden;
   display: block;
@@ -2236,17 +2301,17 @@ hr {
 }
 
 /* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
-.client-logo.pearson-logo::after:hover {
+.client-logo.cancer-logo:hover {
   color: transparent;
 }
 
 /* line 60, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo.bede-logo::after {
-  width: 219px;
-  height: 94px;
+.client-logo.aljazeera-logo {
+  width: 187px;
+  height: 64px;
   background-repeat: no-repeat;
   background-image: url(../../../../img/client-sprite.svg);
-  background-position: -219px -94px;
+  background-position: -15px -13px;
   color: transparent;
   overflow: hidden;
   display: block;
@@ -2254,48 +2319,12 @@ hr {
 }
 
 /* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
-.client-logo.bede-logo::after:hover {
+.client-logo.aljazeera-logo:hover {
   color: transparent;
 }
 
 /* line 61, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo.cancer-logo::after {
-  width: 219px;
-  height: 95px;
-  background-repeat: no-repeat;
-  background-image: url(../../../../img/client-sprite.svg);
-  background-position: -219px -188px;
-  color: transparent;
-  overflow: hidden;
-  display: block;
-  background-repeat: no-repeat;
-}
-
-/* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
-.client-logo.cancer-logo::after:hover {
-  color: transparent;
-}
-
-/* line 62, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo.aljazeera-logo::after {
-  width: 219px;
-  height: 94px;
-  background-repeat: no-repeat;
-  background-image: url(../../../../img/client-sprite.svg);
-  background-position: 0px 0px;
-  color: transparent;
-  overflow: hidden;
-  display: block;
-  background-repeat: no-repeat;
-}
-
-/* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
-.client-logo.aljazeera-logo::after:hover {
-  color: transparent;
-}
-
-/* line 63, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo.lloyds-logo::after {
+.client-logo.lloyds-logo {
   width: 220px;
   height: 94px;
   background-repeat: no-repeat;
@@ -2308,17 +2337,53 @@ hr {
 }
 
 /* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
-.client-logo.lloyds-logo::after:hover {
+.client-logo.lloyds-logo:hover {
+  color: transparent;
+}
+
+/* line 62, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
+.client-logo.bybox-logo {
+  width: 172px;
+  height: 33px;
+  background-repeat: no-repeat;
+  background-image: url(../../../../img/client-sprite.svg);
+  background-position: -461px -126px;
+  color: transparent;
+  overflow: hidden;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+/* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
+.client-logo.bybox-logo:hover {
+  color: transparent;
+}
+
+/* line 63, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
+.client-logo.express-logo {
+  width: 121px;
+  height: 65px;
+  background-repeat: no-repeat;
+  background-image: url(../../../../img/client-sprite.svg);
+  background-position: -708px -109px;
+  color: transparent;
+  overflow: hidden;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+/* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
+.client-logo.express-logo:hover {
   color: transparent;
 }
 
 /* line 64, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo.bybox-logo::after {
-  width: 220px;
-  height: 94px;
+.client-logo.vfs-logo {
+  width: 195px;
+  height: 28px;
   background-repeat: no-repeat;
   background-image: url(../../../../img/client-sprite.svg);
-  background-position: -438px -94px;
+  background-position: -450px -221px;
   color: transparent;
   overflow: hidden;
   display: block;
@@ -2326,43 +2391,7 @@ hr {
 }
 
 /* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
-.client-logo.bybox-logo::after:hover {
-  color: transparent;
-}
-
-/* line 65, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo.express-logo::after {
-  width: 219px;
-  height: 94px;
-  background-repeat: no-repeat;
-  background-image: url(../../../../img/client-sprite.svg);
-  background-position: -658px -94px;
-  color: transparent;
-  overflow: hidden;
-  display: block;
-  background-repeat: no-repeat;
-}
-
-/* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
-.client-logo.express-logo::after:hover {
-  color: transparent;
-}
-
-/* line 66, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_clients.scss */
-.client-logo.vfs-logo::after {
-  width: 220px;
-  height: 94px;
-  background-repeat: no-repeat;
-  background-image: url(../../../../img/client-sprite.svg);
-  background-position: -438px -188px;
-  color: transparent;
-  overflow: hidden;
-  display: block;
-  background-repeat: no-repeat;
-}
-
-/* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
-.client-logo.vfs-logo::after:hover {
+.client-logo.vfs-logo:hover {
   color: transparent;
 }
 
@@ -2926,7 +2955,7 @@ hr {
   -webkit-transform: rotate(-3deg) skew(-3deg, 0deg);
           transform: rotate(-3deg) skew(-3deg, 0deg);
   width: 100%;
-  bottom: -10px;
+  bottom: -15px;
 }
 
 @media screen and (max-width: 700px) {
@@ -2940,7 +2969,7 @@ hr {
 .card::before {
   -webkit-transition: 0.2s;
   transition: 0.2s;
-  height: 20px;
+  height: 25px;
   box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.12);
 }
 
@@ -2994,42 +3023,58 @@ hr {
 }
 
 /* line 92, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+.card-logo {
+  margin: 20px 20px -10px;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+/* line 98, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-title {
   color: #ed4f7e;
-  padding: 20px 20px 0;
+  padding: 25px 20px 0;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-/* line 97, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 103, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card:hover .card-title {
   color: #e8215c;
 }
 
-/* line 102, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 108, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+.card-excerpt {
+  padding: 0 20px;
+  margin-bottom: 0;
+  color: #6b7482;
+}
+
+/* line 114, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-meta {
   color: #6b7482;
   padding: 0 20px 5px;
 }
 
-/* line 107, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 119, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-tags {
   padding: 0 20px;
   display: table;
 }
 
-/* line 112, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 124, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-btn {
   position: relative;
   z-index: 1;
   display: block;
-  padding: 40px 20px 20px;
+  padding: 30px 20px 20px;
   margin-bottom: -50px;
   border: none;
 }
 
 @media screen and (max-width: 700px) {
-  /* line 112, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+  /* line 124, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
   .card-btn {
     margin-bottom: 0;
   }
@@ -8346,7 +8391,7 @@ a:hover {
 }
 
 /* line 69, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/critical/_header.scss */
-.gbl-head-btn:after {
+.gbl-head-btn::after {
   content: "";
   overflow: hidden;
   display: block;
@@ -8366,7 +8411,7 @@ a:hover {
 }
 
 /* line 15, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_sprite.scss */
-.gbl-head-btn:after:hover {
+.gbl-head-btn::after:hover {
   color: transparent;
 }
 

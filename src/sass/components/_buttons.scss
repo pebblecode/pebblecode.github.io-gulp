@@ -12,10 +12,16 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: $zeta - 2px;
+  display: table;
 
   &:hover {
     color: $primary;
     border-color: lighten($primary, 30);
+  }
+
+  & + & {
+    display: inline-block;
+    margin-left: 10px;
   }
 
   &:focus { outline: none; }

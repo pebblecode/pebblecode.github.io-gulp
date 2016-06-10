@@ -51,6 +51,7 @@
   .blog &:last-child,
   .post &:last-child {
     color: white;
+    font-weight: $font-bold;
   }
 }
 
