@@ -3,7 +3,7 @@
   // Navigation appear on scroll up
   var gblHead = $('.gbl-head');
   $(window).scroll(function() {
-    if ($(this).scrollTop() > 100) {
+    if ($(this).scrollTop() > 0) {
       gblHead.removeClass('top');
     } else {
       gblHead.addClass('top');

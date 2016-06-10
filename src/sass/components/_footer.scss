@@ -3,12 +3,11 @@
 //===============================================================================
 .gbl-foot {
   background-color: white;
-  border-top: 1px solid $primary;
 }
 
 .gbl-foot-inner {
   position: relative;
-  padding: 20px $gutter * 2 40px;
+  padding: 20px $gutter * 2 60px;
 
   @media screen and ( max-width: $medium + 100px ) {
     padding: 20px $gutter;

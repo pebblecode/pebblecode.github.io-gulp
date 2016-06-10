@@ -6,7 +6,7 @@
   line-height: 1;
   color: $ink;
   position: relative;
-  padding: 10px 15px 7px;
+  padding: 10px 12px 7px 15px;
   border: 2px solid rgba($ink, 0.2);
   border-radius: 50px;
   text-transform: uppercase;
@@ -15,25 +15,61 @@
 
   &:hover {
     color: $primary;
-    border-color: rgba($primary, 0.2);
+    border-color: lighten($primary, 30);
   }
 
   &:focus { outline: none; }
+}
+
+.btn-arrow {
+  padding-right: 22px;
+
+  &::after {
+    @include pseudo;
+    @include sprite($arrowr-ink);
+    top: 50%;
+    right: 7px;
+    transform: translateY(-55%) scale(0.8);
+    transition: opacity 0.2s;
+    opacity: 0.5;
+  }
+
+  &:hover::after {
+    @include sprite($arrowr-pink);
+    opacity: 1;
+  }
 }
 
 .btn-light {
   color: rgba(white, 0.9);
   border-color: rgba(white, 0.2);
 
+  &::after {
+    @include sprite($arrowr-white);
+  }
+
   &:hover {
     color: white;
     border-color: rgba(white, 0.6);
+
+    &::after {
+      @include sprite($arrowr-white);
+    }
   }
 }
 
 .btn-lrg {
   padding: 15px 30px 13px;
   font-size: $zeta;
+
+  &.btn-arrow {
+    padding-right: 37px;
+
+    &::after {
+      transform: translateY(-54%);
+      right: 12px;
+    }
+  }
 }
 
 .btn-center {

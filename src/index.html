@@ -56,7 +56,7 @@
       <div class="block-inner grid">
         <h2>Our Mission</h2>
         <p>We’re good at harnessing the power of most complex tools and technology and applying these to solve business problems.</p>
-        <button class="btn btn-lrg btn-light btn-center">What we've Done</button>
+        <button class="btn btn-lrg btn-light btn-center btn-arrow">What we've Done</button>
       </div>
     </div>
     <hr class="border-dark">
@@ -111,21 +111,52 @@
     <div class="block-inner grid">
       <h2 class="text-center">Recent Posts</h2>
       <div class="card col-1-3">
-        <img class="card-img" src="/img/features/couch.jpg" alt="">
-        <div class="card-inner">
+        <a class="card-link">
+          <div class="card-img" style="background-image: url(/img/features/couch.jpg)"></div>
           <h3 class="card-title">Conquering PageSpeed with Jekyll</h3>
-          <div class="meta">
+          <div class="card-meta meta">
             <span class="meta-author">Ian Black</span>
             <span class="meta-date">May 31, 2016</span>
           </div>
-          <div class="tags">
-            <a class="btn btn-grey tag">Hacks</a>
-          </div>
-          <a class="btn">Read Post</a>
+        </a>
+        <div class="card-tags tags">
+          <a class="btn tag">Hacks</a>
         </div>
+        <a class="card-btn">
+          <button class="btn btn-arrow">Read Post</button>
+        </a>
       </div>
       <div class="card col-1-3">
-
+        <a class="card-link">
+          <div class="card-img" style="background-image: url(/img/features/couch.jpg)"></div>
+          <h3 class="card-title">Conquering PageSpeed with Jekyll</h3>
+          <div class="card-meta meta">
+            <span class="meta-author">Ian Black</span>
+            <span class="meta-date">May 31, 2016</span>
+          </div>
+        </a>
+        <div class="card-tags tags">
+          <a class="btn tag">Hacks</a>
+        </div>
+        <a class="card-btn">
+          <button class="btn btn-arrow">Read Post</button>
+        </a>
+      </div>
+      <div class="card col-1-3">
+        <a class="card-link">
+          <div class="card-img" style="background-image: url(/img/features/couch.jpg)"></div>
+          <h3 class="card-title">Conquering PageSpeed with Jekyll</h3>
+          <div class="card-meta meta">
+            <span class="meta-author">Ian Black</span>
+            <span class="meta-date">May 31, 2016</span>
+          </div>
+        </a>
+        <div class="card-tags tags">
+          <a class="btn tag">Hacks</a>
+        </div>
+        <a class="card-btn">
+          <button class="btn btn-arrow">Read Post</button>
+        </a>
       </div>
     </div>
 
@@ -134,12 +165,7 @@
   @@include('./_includes/footer.html')
 
 
-
-
-
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-  <script src="js/vendor/scrollReveal.min.js"></script>
-  <script>window.sr = new scrollReveal();</script>
   <script src="js/main.js"></script>
 
   <script>
