@@ -34,14 +34,15 @@
 .gbl-head-nav-item {
   @media screen and ( max-width: $medium ) {
     text-align: right;
-    background-color: rgba(black, 0.1);
+    background-color: rgba(black, 0.07);
   }
 
   &:hover {
     color: rgba(white, 0.9);
 
     @media screen and ( max-width: $medium ) {
-      background-color: rgba(black, 0.2);
+      background-color: rgba(black, 0.12);
+      border-top-color: rgba(black, 0.08);
     }
   }
 

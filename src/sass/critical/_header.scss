@@ -47,7 +47,9 @@
 
   @media screen and ( max-width: $medium ) {
     float: none;
-    padding: 10px $gutter;
+    margin: 0;
+    border-top: 1px solid rgba(black, 0.08);
+    padding: 12px $gutter 10px;
   }
 }
 

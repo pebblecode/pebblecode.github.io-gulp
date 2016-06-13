@@ -152,7 +152,12 @@
 .card-subtitle {
   color: lighten($ink, 25);
   padding: 0 25px;
+  line-height: 1.1;
   font-weight: $font-regular;
+
+  @media screen and ( max-width: $medium ) {
+    font-size: $delta;
+  }
 
   .block-light & {
     color: rgba(white, 0.6);

@@ -1188,39 +1188,47 @@ hr {
 .card-subtitle {
   color: #afb5bd;
   padding: 0 25px;
+  line-height: 1.1;
   font-weight: 400;
 }
 
-/* line 157, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+@media screen and (max-width: 700px) {
+  /* line 152, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+  .card-subtitle {
+    font-size: 20px;
+  }
+}
+
+/* line 162, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .block-light .card-subtitle {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* line 162, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 167, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-excerpt {
   padding: 0 25px;
   margin-bottom: 0;
   color: #6b7482;
 }
 
-/* line 167, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 172, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .block-light .card-excerpt {
   color: white;
 }
 
-/* line 172, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 177, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-meta {
   color: #6b7482;
   padding: 0 25px 5px;
 }
 
-/* line 177, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 182, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-tags {
   padding: 0 25px;
   display: table;
 }
 
-/* line 182, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+/* line 187, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
 .card-btn {
   position: relative;
   z-index: 1;
@@ -1231,7 +1239,7 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
-  /* line 182, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
+  /* line 187, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_cards.scss */
   .card-btn {
     margin-bottom: 0;
   }
@@ -1503,26 +1511,9 @@ hr {
   position: relative;
   padding: 0;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
-  width: calc(1000px - 200px);
 }
 
-@media screen and (max-width: 1000px) {
-  /* line 1, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
-  .aside-block {
-    width: 100%;
-  }
-  /* line 10, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
-  .product-block .aside-block {
-    background-color: transparent;
-    box-shadow: none;
-  }
-  /* line 14, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
-  .product-block .aside-block::after, .product-block .aside-block::before {
-    display: none;
-  }
-}
-
-/* line 21, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+/* line 6, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
 .aside-block::before, .aside-block::after {
   content: "";
   overflow: hidden;
@@ -1538,13 +1529,13 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
-  /* line 21, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+  /* line 6, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
   .aside-block::before, .aside-block::after {
     display: none;
   }
 }
 
-/* line 34, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+/* line 19, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
 .aside-block::before {
   -webkit-transition: 0.2s;
   transition: 0.2s;
@@ -1552,67 +1543,26 @@ hr {
   box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.12);
 }
 
-/* line 40, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+/* line 25, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
 .aside-block::after {
   position: relative;
   height: 50px;
   background-color: white;
 }
 
-/* line 46, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+/* line 31, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
 .aside-block .block-inner {
   padding: 0 40px;
 }
 
 @media screen and (max-width: 700px) {
-  /* line 46, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+  /* line 31, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
   .aside-block .block-inner {
     padding: 0 20px;
   }
 }
 
-/* line 54, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
-.aside-block .product-title {
-  font-size: 72px;
-}
-
-@media screen and (max-width: 700px) {
-  /* line 54, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
-  .aside-block .product-title {
-    font-size: 64px;
-  }
-}
-
-/* line 62, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
-.aside-block .product-subtitle {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-@media screen and (max-width: 700px) {
-  /* line 62, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
-  .aside-block .product-subtitle {
-    font-size: 18px;
-  }
-}
-
-/* line 71, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
-.product-block .aside-block {
-  margin-top: -120px;
-}
-
-/* line 74, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
-.product-block .aside-block .block-inner {
-  margin-bottom: -40px;
-}
-
-/* line 79, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
-.aside-block .product-img {
-  top: -80px;
-  margin: 0 auto -50px;
-}
-
-/* line 94, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+/* line 49, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
 .aside-container {
   clear: both;
   position: relative;
@@ -1630,7 +1580,7 @@ hr {
 }
 
 @media screen and (max-width: 1000px) {
-  /* line 94, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+  /* line 49, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
   .aside-container {
     margin: 70px 5%;
     width: 90%;
@@ -1638,7 +1588,7 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
-  /* line 94, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+  /* line 49, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
   .aside-container {
     background: white;
     width: calc(100% - 40px);
@@ -1649,7 +1599,7 @@ hr {
 }
 
 @media screen and (min-width: 700px) {
-  /* line 116, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+  /* line 71, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
   .aside-container:after {
     content: "";
     overflow: hidden;
@@ -1667,7 +1617,7 @@ hr {
   }
 }
 
-/* line 127, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+/* line 82, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
 .aside-container h3 {
   font-size: 42px;
   line-height: 1;
@@ -1675,25 +1625,25 @@ hr {
 }
 
 @media screen and (max-width: 700px) {
-  /* line 127, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+  /* line 82, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
   .aside-container h3 {
     font-size: 38px;
   }
 }
 
-/* line 137, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+/* line 92, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
 .aside-container p {
   font-size: 22px;
 }
 
 @media screen and (max-width: 700px) {
-  /* line 137, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+  /* line 92, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
   .aside-container p {
     font-size: 20px;
   }
 }
 
-/* line 145, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
+/* line 100, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/blocks/_aside.scss */
 .aside-container .btn, .aside-container .rt-footer .rt-btn, .rt-footer .aside-container .rt-btn {
   margin-top: 30px;
   display: table;
@@ -2189,7 +2139,7 @@ hr {
   /* line 34, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_header.scss */
   .gbl-head-nav-item {
     text-align: right;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.07);
   }
 }
 
@@ -2201,11 +2151,12 @@ hr {
 @media screen and (max-width: 700px) {
   /* line 40, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_header.scss */
   .gbl-head-nav-item:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.12);
+    border-top-color: rgba(0, 0, 0, 0.08);
   }
 }
 
-/* line 48, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_header.scss */
+/* line 49, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_header.scss */
 .gbl-head-nav-item.active,
 .blog .gbl-head-nav-item:last-child,
 .post .gbl-head-nav-item:last-child {
@@ -2213,7 +2164,7 @@ hr {
   font-weight: 700;
 }
 
-/* line 56, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_header.scss */
+/* line 57, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/components/_header.scss */
 .gbl-head-btn.active::after {
   width: 17px;
   height: 17px;
@@ -8725,11 +8676,13 @@ a:hover {
   /* line 40, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/critical/_header.scss */
   .gbl-head-nav-item {
     float: none;
-    padding: 10px 20px;
+    margin: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 12px 20px 10px;
   }
 }
 
-/* line 54, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/critical/_header.scss */
+/* line 56, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/critical/_header.scss */
 .gbl-head-btn {
   color: transparent;
   overflow: hidden;
@@ -8763,7 +8716,7 @@ a:hover {
   height: 100%;
 }
 
-/* line 69, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/critical/_header.scss */
+/* line 71, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/critical/_header.scss */
 .gbl-head-btn::after {
   content: "";
   overflow: hidden;
@@ -8789,7 +8742,7 @@ a:hover {
 }
 
 @media screen and (max-width: 700px) {
-  /* line 54, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/critical/_header.scss */
+  /* line 56, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/critical/_header.scss */
   .gbl-head-btn {
     display: block;
   }

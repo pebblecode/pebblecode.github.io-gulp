@@ -2,21 +2,6 @@
   position: relative;
   padding: 0;
   box-shadow: 0 -2px 10px rgba(black, 0.12);
-  width: calc(1000px - 200px);
-
-  @media screen and ( max-width: $large ) {
-    width: 100%;
-
-    .product-block & {
-      background-color: transparent;
-      box-shadow: none;
-
-      &::after,
-      &::before {
-        display: none;
-      }
-    }
-  }
 
   &::before,
   &::after {
@@ -49,36 +34,6 @@
     @media screen and ( max-width: $medium ) {
       padding: 0 $gutter;
     }
-  }
-
-  .product-title {
-    font-size: $giga;
-
-    @media screen and ( max-width: $medium ) {
-      font-size: $mega;
-    }
-  }
-
-  .product-subtitle {
-    font-size: $delta;
-    margin-bottom: 30px;
-
-    @media screen and ( max-width: $medium ) {
-      font-size: $epsilon;
-    }
-  }
-
-  .product-block & {
-    margin-top: -120px;
-
-    .block-inner {
-      margin-bottom: -40px;
-    }
-  }
-
-  .product-img {
-    top: -80px;
-    margin: 0 auto -50px;
   }
 }
 
