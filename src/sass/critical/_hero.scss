@@ -6,7 +6,7 @@
   color: white;
   text-align: center;
   padding-top: 140px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
 
   @media screen and ( max-width: $medium ) {
     padding: 90px $gutter 10px
@@ -24,16 +24,5 @@
 
   @media screen and ( max-width: $medium ) {
     font-size: $delta;
-  }
-}
-
-.hero-play-btn {
-  position: absolute;
-  left: 50%;
-  bottom: -110px;
-  transform: translateX(-50%);
-
-  &:hover {
-    transform: translateX(-50%) scale(1.1);
   }
 }

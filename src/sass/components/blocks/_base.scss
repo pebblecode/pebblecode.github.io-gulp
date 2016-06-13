@@ -48,88 +48,26 @@
   }
 }
 
-.intro-block {
-  .block-inner {
-    text-align: center;
-    padding-left: $gutter * 3;
-    padding-right: $gutter * 3;
+.block-clear-top {
+  @extend .block-clear;
 
-    @media screen and ( max-width: $medium ) {
-      padding-left: $gutter;
-      padding-right: $gutter;
-    }
+  &.pink-bg {
+    background: linear-gradient(10deg, $pink 65%, transparent 65%), linear-gradient(-10deg, rgba(darken($pink, 20), 0.8) 65%, transparent 65%);
   }
 
-  p {
-    font-size: $gamma;
-
-    @media screen and ( max-width: $medium ) {
-      font-size: $epsilon;
-    }
+  &.blue-bg {
+    background: linear-gradient(-10deg, transparent 40%, $blue 40%), linear-gradient(10deg, transparent 40%, rgba($blue, 0.5) 40%);
   }
 
-  .btn {
-    margin: 30px 5px 0;
+  &.aqua-bg {
+    background: linear-gradient(-10deg, transparent 40%, $aqua 40%), linear-gradient(10deg, transparent 40%, rgba($aqua, 0.5) 40%);
+  }
+
+  &.slash::after {
+    top: 0;
+    bottom: auto;
   }
 }
-
-// Features
-.block.feature-block {
-  padding-top: 80px;
-  padding-bottom: 80px;
-
-  @media screen and ( max-width: $medium ) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-
-    .text-right {
-      text-align: center;
-    }
-  }
-
-  [class*='col-'] {
-    vertical-align: middle;
-  }
-
-  img {
-    margin: 10px 10%;
-    width: 80%;
-  }
-
-  p {
-    font-size: $delta;
-  }
-}
-
-
-// Product/Call-to-actions
-.product-block {}
-
-.product-img {
-  display: table;
-  margin: -140px auto 30px;
-  width: 300px;
-  max-width: 70%;
-}
-
-.product-title {
-  @extend h1;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -1,5 +1,5 @@
 // Colours
-$paper: white;
+$white: white;
 $grey: #f8f9f9;
 $ink: #6b7482;
 
@@ -11,6 +11,25 @@ $green: #a4ce4e;
 $orange: #faad40;
 
 $primary: $pink;
+
+$colors: (
+  "primary": $primary,
+  "white": $white,
+  "grey": $grey,
+  "ink": $ink,
+  "pink": $pink,
+  "pink-dark": shade($pink, 5%),
+  "purple": $purple,
+  "purple-dark": shade($purple, 5%),
+  "blue": $blue,
+  "blue-dark": shade($blue, 5%),
+  "aqua": $aqua,
+  "aqua-dark": shade($aqua, 5%),
+  "green": $green,
+  "green-dark": shade($green, 5%),
+  "orange": $orange,
+  "orange-dark": shade($orange, 5%)
+);
 
 // Typography
 $base-font: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
@@ -28,7 +47,8 @@ $beta: 32px;
 $gamma: 24px;
 $delta: 20px;
 $epsilon: 18px;
-$zeta: 12px;
+$zeta: 16px;
+$eta: 12px;
 
 $body-font-size: $epsilon;
 

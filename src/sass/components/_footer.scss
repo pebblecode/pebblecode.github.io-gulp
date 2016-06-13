@@ -1,9 +1,5 @@
-//===============================================================================
-// GLOBAL FOOTER
-//===============================================================================
-.gbl-foot {}
-
 .gbl-foot-inner {
+  -webkit-font-smoothing: antialiased;
   position: relative;
   padding: 20px $gutter * 2 60px;
 

@@ -12,7 +12,7 @@
   border-radius: 50px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  font-size: $zeta - 2px;
+  font-size: $eta - 2px;
   display: inline-block;
 
   &:hover {
@@ -62,9 +62,13 @@
   }
 }
 
+.btn-white {
+  background-color: white;
+}
+
 .btn-lrg {
   padding: 15px 30px 13px;
-  font-size: $zeta;
+  font-size: $eta;
   border-width: 3px;
 
   &.btn-arrow {
@@ -86,9 +90,36 @@
 .btn-block {
   border: none;
   box-shadow: 0 2px 4px rgba(black, 0.2);
+
+  &:hover {
+    box-shadow: 0 4px 6px rgba(black, 0.2);
+  }
 }
 
 .btn-play {
+  padding-left: 45px;
+
+  &::after {
+    @include pseudo;
+    @include sprite($play-ink);
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%) scale(0.55);
+    opacity: 0.5;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+
+    &:hover::after {
+      opacity: 1;
+      @include sprite($play-pink);
+    }
+  }
+}
+
+.btn-circle {
   @include hide-text;
   box-shadow: 0 4px 6px rgba(black, 0.2);
   color: transparent;
@@ -102,10 +133,10 @@
 
   &::after {
     @include pseudo;
-    @include sprite($play-ink);
     top: 50%;
     left: 54%;
     transform: translate(-50%, -50%);
+    opacity: 1;
   }
 
   &:hover {

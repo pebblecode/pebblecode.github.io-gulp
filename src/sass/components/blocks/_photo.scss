@@ -8,10 +8,18 @@
   }
 }
 
-.photo-top {
+.photo-top,
+.photo-btm {
   height: 700px;
-  margin-top: -350px;
   z-index: -1;
+}
+
+.photo-top {
+  margin-top: -350px;
+}
+
+.photo-btm {
+  margin-bottom: -350px;
 }
 
 .photo {

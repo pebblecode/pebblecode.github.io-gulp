@@ -113,14 +113,14 @@
 }
 
 .card-logo {
-  margin: $gutter $gutter -10px;
+  margin: 25px 25px -10px;
   transform-origin: left;
   transform: scale(0.8);
 }
 
 .card-title {
 	color: $primary;
-	padding: 25px $gutter 0;
+	padding: 25px 25px 0;
   transition: 0.2s;
 
   .card:hover & {
@@ -137,7 +137,7 @@
 }
 
 .card-excerpt {
-  padding: 0 $gutter;
+  padding: 0 25px;
   margin-bottom: 0;
   color: $ink;
 
@@ -148,11 +148,11 @@
 
 .card-meta {
 	color: $ink;
-  padding: 0 $gutter 5px;
+  padding: 0 25px 5px;
 }
 
 .card-tags {
-  padding: 0 $gutter;
+  padding: 0 25px;
   display: table;
 }
 

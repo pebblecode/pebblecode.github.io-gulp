@@ -4,12 +4,15 @@
 @import "shared/_normalize";
 @import "shared/_grid";
 @import "shared/_typography";
-@import "shared/_themes";
 @import "shared/_code";
 @import "shared/_elements";
 @import "shared/_slashes";
 
-@import "components/_blocks";
+@import "components/blocks/_base";
+@import "components/blocks/_intro";
+@import "components/blocks/_photo";
+@import "components/blocks/_product";
+@import "components/blocks/_feature";
 @import "components/_cards";
 @import "components/_buttons";
 @import "components/_tabs";
@@ -20,10 +23,8 @@
 @import "components/_clients";
 @import "components/_share";
 @import "components/_related";
-@import "components/_photo";
 @import "components/_cta";
 @import "components/_media";
-@import "components/_cards";
 
 @import "pages/_home";
 @import "pages/_services";

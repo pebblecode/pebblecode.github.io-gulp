@@ -1,4 +1,4 @@
-* { -webkit-font-smoothing: antialiased; }
+p { -webkit-font-smoothing: antialiased; }
 
 ::selection { background: rgba($ink, 0.2); }
 
@@ -27,6 +27,7 @@ h6 { font-size: $zeta; }
 .text-right { text-align: right; }
 
 blockquote {
+  -webkit-font-smoothing: antialiased;
   border-left: 10px solid $primary;
   padding-left: 20px;
   font-style: normal;

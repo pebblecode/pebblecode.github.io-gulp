@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="gbl-head show top aqua-bg">
+    <div class="gbl-head-inner grid">
+      <a href="/" class="gbl-head-logo">pebble {code}</a>
+      <button id="navBtn" class="gbl-head-btn">Menu</button>
+      <nav id="navMenu" class="gbl-head-nav">
+        <a href="about.html" class="gbl-head-nav-item active">About</a>
+        <a href="work.html" class="gbl-head-nav-item">Work</a>
+        <a href="careers.html" class="gbl-head-nav-item">Careers</a>
+        <a href="contact.html" class="gbl-head-nav-item">Contact</a>
+        <a href="blog.html" class="gbl-head-nav-item">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero slash-shadow aqua-bg slash-right">
+    <div class="hero-inner grid">
+      <h1 class="hero-title">Innovation <br>in our DNA</h1>
+    </div>
+  </section>
+
+  <section class="photo-block">
+    <div class="photo" style="background-image: url(/img/features/couch.jpg)"></div>
+  </section>
+
+  <section class="feature-block block grey-bg slash-shadow slash-top">
+    <div class="block-inner grid">
+      <div class="col-1-2">
+        <h3>Who we are</h3>
+        <p>From young digital upstarts we have grown over six years into a business that combines cutting-edge digital innovation with deep business rigour. </p>
+        <p class="zeta">We are proud to have helped launch a number of successful start-ups and to have supported global enterprises embrace digital disruption.</p>
+        <p class="zeta">Along the way our digital products have helped young people to have a national voice, improved safety, cast actors, made TV ads, played bingo and unlocked locker doors. </p>
+      </div>
+      <div class="col-1-2">
+        <img src="/img/illustrations/chart.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <section class="feature-block block slash-shadow slash-right">
+    <div class="block-inner grid">
+      <div class="col-1-2">
+        <img src="/img/illustrations/chart.png" alt="">
+      </div>
+      <div class="col-1-2">
+        <h3>Innovation in our DNA</h3>
+        <p>From inception pebble {code} has championed a love of experimentation and invention.</p>
+        <p class="zeta">Our ability to innovate is driven from an open, collaborative culture that promotes autonomy over micro-management and working software over meetings.</p>
+        <p class="zeta">Our culture allows us to help clients take new digital products to market, revolutionise existing business processes and find innovation in even the dustiest of drawers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-block">
+    <div class="photo" style="background-image: url(/img/features/couch.jpg)"></div>
+  </section>
+
+  <section id="awards" class="blockblock-light slash-shadow slash-top pink-bg">
+    <div class="feature-block block block-light">
+      <div class="block-inner grid">
+        <div class="col-1-2">
+          <h3>Innovation in our DNA</h3>
+          <p>From inception pebble {code} has championed a love of experimentation and invention.</p>
+          <p class="zeta">Our ability to innovate is driven from an open, collaborative culture that promotes autonomy over micro-management and working software over meetings.</p>
+          <p class="zeta">Our culture allows us to help clients take new digital products to market, revolutionise existing business processes and find innovation in even the dustiest of drawers.</p>
+        </div>
+        <div class="col-1-2">
+          <img src="/img/illustrations/chart.png" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block pink-dark-bg slash-shadow">
+    <div class="feature-block block block-light">
+      <div class="block-inner grid">
+        <div class="col-1-2">
+          <img src="/img/illustrations/chart.png" alt="">
+        </div>
+        <div class="col-1-2">
+          <h3>Innovation in our DNA</h3>
+          <p>From inception pebble {code} has championed a love of experimentation and invention.</p>
+          <p class="zeta">Our ability to innovate is driven from an open, collaborative culture that promotes autonomy over micro-management and working software over meetings.</p>
+          <p class="zeta">Our culture allows us to help clients take new digital products to market, revolutionise existing business processes and find innovation in even the dustiest of drawers.</p>
+          <a class="btn btn-block btn-white btn-lrg btn-play">Team Hacking</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="photo-block photo-btm">
+    <div class="photo" style="background-image: url(/img/features/couch.jpg)"></div>
+  </section>
+
+  <footer class="gbl-foot grey-bg">
+    <div class="gbl-foot-inner grid">
+      <ul class="gbl-foot-links">
+        <li><a href="tel:+442033273940">+44 (0) 20 3327 3940</a></li>
+        <li><a href="mailto:hello@pebblecode.com">hello@pebblecode.com</a></li>
+        <li><a href="http://pebblecode.com/contact">Find us</a></li>
+        <li><a href="http://pebblecode.com/careers">Join us</a></li>
+      </ul>
+      <ul class="gbl-foot-social">
+        <li><a href="https://github.com/pebblecode" class="github" target="_blank">Github</a></li>
+        <li><a href="https://twitter.com/pebblecode" class="twitter" target="_blank">Twitter</a></li>
+        <li><a href="https://vimeo.com/pebblecode" class="vimeo" target="_blank">Vimeo</a></li>
+      </ul>
+      <span class="gbl-foot-tagline">Delivering Awesome!</span>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+  // Home - change header colour
+  var headerContainer = $('.gbl-head');
+  if ($(headerContainer).length > 0) {
+    var why;
+    var industry;
+
+    var scrollPositions = function () {
+      awards = $('#awards');
+      people = $('#people');
+    };
+
+    var headerBG = function () {
+      var windowTop = $(window).scrollTop();
+      if (windowTop > people.offset().top - 200 || people.offset().bottom) {
+        headerContainer.css({'background-color':'#0ea2dc'});
+      } else if (windowTop > awards.offset().top - 200 || awards.offset().bottom) {
+        headerContainer.css({'background-color':'#ed4f7e'});
+      } else {
+        headerContainer.css({'background-color':'#37bec0'});
+      }
+    };
+
+    $(window).resize(scrollPositions).scroll(headerBG);
+    scrollPositions();
+    headerBG();
+  }
+  </script>
+</body>
+</html>
