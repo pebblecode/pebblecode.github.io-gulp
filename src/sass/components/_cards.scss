@@ -84,14 +84,21 @@
   }
 
   .blue-bg &,
-  .blue-bg &::after {
+  .blue-bg &::after,
+  .blue-bg & .card-title::after {
     background-color: lighten($blue, 10);
   }
 
   .blue-bg &:hover,
-  .blue-bg &:hover::after {
+  .blue-bg &:hover::after,
+  .blue-bg &:hover .card-title::after {
     background-color: lighten($blue, 14);
   }
+}
+
+.card-inner {
+  position: relative;
+  overflow: hidden;
 }
 
 .card-ball {
@@ -123,16 +130,32 @@
 	padding: 25px 25px 0;
   transition: 0.2s;
 
+  &.slash-top {
+    padding-top: 5px;
+  }
+
   .card:hover & {
     color: darken($primary, 10);
   }
 
-  .block-light & {
+  .block-light &,
+  .block-light:hover & {
     color: white;
   }
 
-  .block-light:hover & {
-    color: rgba(white, 0.85);
+  &::after {
+    transition: 0.2s;
+    z-index: -1;
+  }
+}
+
+.card-subtitle {
+  color: lighten($ink, 25);
+  padding: 0 25px;
+  font-weight: $font-regular;
+
+  .block-light & {
+    color: rgba(white, 0.6);
   }
 }
 

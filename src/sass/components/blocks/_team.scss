@@ -1,0 +1,29 @@
+.team-block {
+  padding-top: 0;
+
+  h2 {
+    top: -20px;
+    position: relative;
+  }
+
+  @media screen and ( min-width: $medium ) {
+    .block-inner {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.person {
+  width: calc(50% - 48px);
+  margin-left: 34px;
+
+  @media screen and ( max-width: $medium ) {
+    padding-bottom: 30px;
+    width: calc(100% - 40px);
+    margin-left: 20px;
+  }
+
+  .card-img {
+    height: 200px;
+  }
+}

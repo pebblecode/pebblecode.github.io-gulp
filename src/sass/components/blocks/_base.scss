@@ -12,17 +12,12 @@
   }
 }
 
-.block-light,
-.block-dark {
+.block-light {
   color: white;
 
   h1, h2, h3 {
     @include text-shadow;
   }
-}
-
-.block-dark {
-  background-color: rgba(black, 0.08);
 }
 
 .block-clear {
@@ -133,62 +128,3 @@
 // .meta-date {
 //   color: rgba(white, 0.8);
 // }
-
-
-// Aside content block
-.aside-container {
-  @include clearfix;
-  position: relative;
-  margin: 70px 10%;
-  width: 80%;
-  padding: 50px 40px 40px;
-  z-index: 2;
-
-  @media screen and ( max-width: $medium + 300px ) {
-    margin: 70px 5%;
-    width: 90%;
-  }
-
-  @media screen and ( max-width: $medium ) {
-    background: white;
-    width: calc(100% - 40px);
-    margin: 40px $gutter;
-    padding: 40px 30px 30px;
-    box-shadow: 0 0 10px rgba(black, 0.2);
-  }
-
-  @media screen and ( min-width: $medium ) {
-    &:after {
-      @include shadow-pseudo;
-      height: 100%;
-      top: 0;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(black, 0.2);
-      z-index: -1;
-      transform: rotate(-0.3deg) skew(1deg);
-    }
-  }
-
-  h3 {
-    font-size: $alpha - 2px;
-    line-height: 1;
-    margin-bottom: 10px;
-
-    @media screen and ( max-width: $medium ) {
-      font-size: $alpha - 6px;
-    }
-  }
-
-  p {
-    font-size: $gamma - 2px;
-
-    @media screen and ( max-width: $medium ) {
-      font-size: $delta;
-    }
-  }
-
-  .btn {
-    margin-top: 30px;
-    display: table;
-  }
-}

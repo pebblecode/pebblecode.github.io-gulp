@@ -1,3 +1,9 @@
+@each $name, $hexa in $colors {
+  .#{$name}-bg.slash::after {
+    background-color: #{$hexa};
+  }
+}
+
 .slash {
   position: relative;
 
@@ -30,11 +36,9 @@
   &.slash-right::after {
     transform: rotate(-2deg) scale(1.2);
   }
-}
 
-@each $name, $hexa in $colors {
-  .#{$name}-bg.slash::after {
-    background-color: #{$hexa};
+  & > & {
+    bottom: -60px;
   }
 }
 

@@ -66,6 +66,20 @@
   background-color: white;
 }
 
+.btn-med {
+  padding: 12px 20px 10px;
+  font-size: $eta;
+
+  &.btn-arrow {
+    padding-right: 34px;
+
+    &::after {
+      transform: translateY(-53%);
+      right: 12px;
+    }
+  }
+}
+
 .btn-lrg {
   padding: 15px 30px 13px;
   font-size: $eta;
@@ -91,13 +105,20 @@
   border: none;
   box-shadow: 0 2px 4px rgba(black, 0.2);
 
+  &.btn-med {
+    padding: 14px 22px 12px;
+  }
+
   &:hover {
     box-shadow: 0 4px 6px rgba(black, 0.2);
   }
 }
 
 .btn-play {
-  padding-left: 45px;
+
+  &.btn {
+    padding-left: 45px;
+  }
 
   &::after {
     @include pseudo;
@@ -134,7 +155,7 @@
   &::after {
     @include pseudo;
     top: 50%;
-    left: 54%;
+    left: 53%;
     transform: translate(-50%, -50%);
     opacity: 1;
   }
