@@ -115,7 +115,6 @@
 }
 
 .btn-play {
-
   &.btn {
     padding-left: 45px;
   }
@@ -133,7 +132,7 @@
   &:hover {
     transform: scale(1.03);
 
-    &:hover::after {
+    &:not(.hero-play-btn):hover::after {
       opacity: 1;
       @include sprite($play-pink);
     }

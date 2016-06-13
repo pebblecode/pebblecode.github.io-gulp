@@ -70,31 +70,46 @@
       <h2>How We Work</h2>
       <p>Starting with defining the problem before looking to the solution. Click the target buttons to find out more of each stage of the process.</p>
       <div class="process-problem-diagram">
+        <div class="target target-1">
+          <button class="target-btn">1</button>
+          <div class="target-popup">
+            <div class="target-popup-inner">
+              <button class="target-close-btn">Close</button>
+              <h4>Design Thinking</h4>
+              <p>By taking design decisions based on findings fromrigorous User Research we are able to make better products sooner. We test assumptions, uncover latent requirements and design digital products from a robust evidence base. By involving users at every step of the design we ensure that digital products are relevant and offer value to end users.</p>
+              <a class="btn btn-arrow">Build the right thing and thing right</a>
+            </div>
+          </div>
+        </div>
+        <div class="target target-2">
+          <div class="target-popup target-popup-down">
+            <div class="target-popup-inner">
+              <button class="target-close-btn">Close</button>
+              <h4>Design Thinking</h4>
+              <p>By taking design decisions based on findings fromrigorous User Research we are able to make better products sooner. We test assumptions, uncover latent requirements and design digital products from a robust evidence base. By involving users at every step of the design we ensure that digital products are relevant and offer value to end users.</p>
+              <a class="btn btn-arrow">Build the right thing and thing right</a>
+            </div>
+          </div>
+          <button class="target-btn">2</button>
+        </div>
+        <div class="target target-3">
+          <div class="target-popup target-popup-down">
+            <div class="target-popup-inner">
+              <button class="target-close-btn">Close</button>
+              <h4>Design Thinking</h4>
+              <p>By taking design decisions based on findings fromrigorous User Research we are able to make better products sooner. We test assumptions, uncover latent requirements and design digital products from a robust evidence base. By involving users at every step of the design we ensure that digital products are relevant and offer value to end users.</p>
+              <a class="btn btn-arrow">Build the right thing and thing right</a>
+            </div>
+          </div>
+          <button class="target-btn">3</button>
+        </div>
         <h3 class="process-title">Problem</h3>
         <ul class="process-problem-points">
           <li class="process-problem">
             <h4 class="process-problem-title">Define the problem</h4>
-            <button class="target-btn">1</button>
-            <div class="target-popup">
-              <div class="target-popup-inner">
-                <button class="target-close-btn">Close</button>
-                <h4>Design Thinking</h4>
-                <p>By taking design decisions based on findings fromrigorous User Research we are able to make better products sooner. We test assumptions, uncover latent requirements and design digital products from a robust evidence base. By involving users at every step of the design we ensure that digital products are relevant and offer value to end users.</p>
-                <a class="btn btn-arrow">Build the right thing and thing right</a>
-              </div>
-            </div>
           </li>
           <li class="process-problem">
             <h4 class="process-problem-title">Observe People</h4>
-            <button class="target-btn">2</button>
-            <div class="target-popup">
-              <div class="target-popup-inner">
-                <button class="target-close-btn">Close</button>
-                <h4>User Experience Strategy and Research</h4>
-                <p>By taking design decisions based on findings fromrigorous User Research we are able to make better products sooner. We test assumptions, uncover latent requirements and design digital products from a robust evidence base. By involving users at every step of the design we ensure that digital products are relevant and offer value to end users.</p>
-                <a class="btn btn-arrow">Build the right thing and thing right</a>
-              </div>
-            </div>
           </li>
           <li class="process-problem">
             <h4 class="process-problem-title">Form Insights</h4>
@@ -104,15 +119,6 @@
           </li>
           <li class="process-problem">
             <h4 class="process-problem-title">Rapid Prototyping</h4>
-            <button class="target-btn">3</button>
-            <div class="target-popup">
-              <div class="target-popup-inner">
-                <button class="target-close-btn">Close</button>
-                <h4>Rapid Prototyping</h4>
-                <p>By taking design decisions based on findings fromrigorous User Research we are able to make better products sooner. We test assumptions, uncover latent requirements and design digital products from a robust evidence base. By involving users at every step of the design we ensure that digital products are relevant and offer value to end users.</p>
-                <a class="btn btn-arrow">Build the right thing and thing right</a>
-              </div>
-            </div>
           </li>
         </ul>
       </div>
@@ -206,16 +212,15 @@
     headerBG();
   }
 
+  var target = $('.target');
   var targetBtn = $('.target-btn');
-  var targetPopup = $('.target-popup');
-  var targetPopupClose = $('.target-close-btn');
+  var targetClose = $('.target-close-btn');
   targetBtn.click(function() {
-    $(targetPopup).removeClass('active');
-    $(this).next(targetPopup).addClass('active');
-    $(this).prev(targetPopup).addClass('active');
+    $(target).removeClass('active');
+    $(this).parent(target).addClass('active');
   });
-  targetPopupClose.click(function() {
-    $(targetPopup).removeClass('active');
+  targetClose.click(function() {
+    $(target).removeClass('active');
   });
   </script>
 </body>

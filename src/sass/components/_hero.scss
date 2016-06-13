@@ -6,9 +6,5 @@
 
   &:hover {
     transform: translateX(-50%) scale(1.1);
-
-    &::after {
-      @include sprite($play-ink);
-    }
   }
 }

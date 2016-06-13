@@ -46,11 +46,11 @@
   &::before {
     @include pseudo;
     top: 10px;
-    left: 22px;
-    width: 50px;
+    left: 24px;
+    width: 45px;
     height: 100%;
     background-color: darken($blue, 10);
-    border: 8px solid darken($blue, 12);
+    border: 6px solid darken($blue, 13);
     box-shadow: $box-shadow;
 
     @media screen and ( max-width: $medium ) {
@@ -81,7 +81,7 @@
     height: 90px;
     border-radius: 50%;
     background-color: $blue;
-    border: 8px solid darken($blue, 5);
+    border: 6px solid darken($blue, 5);
     box-shadow: $box-shadow;
 
     @media screen and ( max-width: $medium ) {
@@ -167,10 +167,10 @@
 
   @media screen and ( max-width: $medium ) {
     margin-left: -60px;
-    width: calc(100% + 50px);
+    width: calc(100vw - 30px);
   }
 
-  &.active {
+  .target.active & {
     top: 0;
     opacity: 1;
     max-height: 100%;
@@ -178,11 +178,11 @@
 }
 
 .target-popup-inner {
+  max-width: 450px;
   padding: 30px 30px 20px;
   background-color: $grey;
   box-shadow: $box-shadow;
   opacity: 0.98;
-
 
   &::before,
   &::after {
@@ -272,26 +272,32 @@
   }
 }
 
+.target-1 {
+  top: 18%;
+  left: 27%;
+}
+
+.target-2 {
+  bottom: 53%;
+  left: 27%;
+}
+
+.target-3 {
+  bottom: 15%;
+  left: 27%;
+}
+
 .target {
   position: absolute;
   z-index: 4;
   text-align: left;
 
+  &.active {
+    z-index: 5;
+  }
+
   @media screen and ( max-width: $medium ) {
-    .target-popup {
-      left: 30px;
-      width: calc(100% + 20px);
-    }
-
-    .target-popup-inner {
-      &::before {
-        left: 30px;
-      }
-
-      &::after {
-        left: 25px;
-      }
-    }
+    left: 15%;
   }
 }
 
@@ -300,16 +306,40 @@
   left: 25%;
 
   @media screen and ( max-width: $medium ) {
-    left: 10%;
+    left: 12%;
+
+    .target-popup {
+      margin-left: -50px;
+    }
+
+    .target-popup-inner::before {
+      left: 50px;
+    }
+
+    .target-popup-inner::after {
+      left: 45px;
+    }
   }
 }
 
 .target-5 {
   bottom: 3%;
-  left: 55%;
+  left: 34%;
 
   @media screen and ( max-width: $medium ) {
-    left: 10%;
+    left: 20%;
     bottom: 18%;
+
+    .target-popup {
+      margin-left: -75px;
+    }
+
+    .target-popup-inner::before {
+      left: 80px;
+    }
+
+    .target-popup-inner::after {
+      left: 70px;
+    }
   }
 }
