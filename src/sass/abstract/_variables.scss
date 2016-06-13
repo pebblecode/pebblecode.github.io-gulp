@@ -18,17 +18,23 @@ $colors: (
   "grey": $grey,
   "ink": $ink,
   "pink": $pink,
-  "pink-dark": shade($pink, 6%),
+  "pink-dark5": shade($pink, 5%),
+  "pink-dark25": shade($pink, 25%),
   "purple": $purple,
-  "purple-dark": shade($purple, 6%),
+  "purple-dark5": shade($purple, 5%),
+  "purple-dark25": shade($purple, 25%),
   "blue": $blue,
-  "blue-dark": shade($blue, 6%),
+  "blue-dark5": shade($blue, 5%),
+  "blue-dark25": shade($blue, 25%),
   "aqua": $aqua,
-  "aqua-dark": shade($aqua, 6%),
+  "aqua-dark5": shade($aqua, 5%),
+  "aqua-dark25": shade($aqua, 25%),
   "green": $green,
-  "green-dark": shade($green, 6%),
+  "green-dark5": shade($green, 5%),
+  "green-dark25": shade($green, 25%),
   "orange": $orange,
-  "orange-dark": shade($orange, 6%)
+  "orange-dark5": shade($orange, 5%),
+  "orange-dark25": shade($orange, 25%)
 );
 
 // Typography

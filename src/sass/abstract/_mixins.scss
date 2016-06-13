@@ -50,6 +50,12 @@
   width: 100%;
 }
 
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 // color: tint($pink, 42%);
 @function tint($color, $percentage) {
   @return mix(white, $color, $percentage);

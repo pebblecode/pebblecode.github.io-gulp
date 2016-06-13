@@ -36,6 +36,14 @@
     background: linear-gradient(-10deg, transparent 40%, $aqua 40%), linear-gradient(10deg, transparent 40%, rgba($aqua, 0.5) 40%);
   }
 
+  &.purple-bg {
+    background: linear-gradient(-10deg, transparent 40%, $pink 40%), linear-gradient(10deg, transparent 40%, rgba($pink, 0.5) 40%);
+  }
+
+  &.purple-dark25-bg {
+    background: linear-gradient(-10deg, transparent 40%, shade($purple, 25%) 40%), linear-gradient(10deg, transparent 40%, rgba(shade($purple, 25%), 0.5) 40%);
+  }
+
   &.slash::after {
     opacity: 0.92;
     bottom: 0;
