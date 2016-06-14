@@ -12,7 +12,7 @@
 .card {
   margin: 30px -4px;
   padding: 0;
-  background: white;
+  background: $grey;
 	position: relative;
 	box-shadow: 0 -2px 10px rgba(black, 0.12);
   transition: 0.2s ease-in-out;
@@ -20,6 +20,11 @@
   @media screen and ( max-width: $medium ) {
     width: 100%;
     display: table;
+  }
+
+  .grey-bg &,
+  .grey-bg &::after {
+    background-color: white;
   }
 
   &:hover {
@@ -46,14 +51,14 @@
 
 	&::before {
     transition: 0.2s;
-  	height: 25px;
+  	height: 30px;
   	box-shadow: -1px 1px 10px rgba(black, 0.12);
 	}
 
 	&::after {
   	position: relative;
   	height: 35px;
-  	background-color: white;
+  	background-color: $grey;
   }
 
   &:nth-of-type(even) {

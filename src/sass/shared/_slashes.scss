@@ -12,8 +12,8 @@
     z-index: 3;
   }
 
-  &:not(.slash-top) .block:last-child {
-    padding-bottom: 30px;
+  & + & {
+    padding-top: 100px;
   }
 
   &::after {

@@ -6,19 +6,6 @@
     padding-top: 0;
     padding-bottom: 0;
   }
-
-  .slash:not(.slash-top) + & {
-    padding-top: 100px;
-  }
-
-  &:not.slash {
-    padding-bottom: 10px;
-  }
-
-  &.slash-top {
-    padding-top: 30px;
-    padding-bottom: 50px;
-  }
 }
 
 .block-light {

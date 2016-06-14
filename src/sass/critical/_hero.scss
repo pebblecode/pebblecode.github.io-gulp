@@ -6,7 +6,7 @@
   color: white;
   text-align: center;
   padding-top: 140px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 
   @media screen and ( max-width: $medium ) {
     padding: 90px $gutter 10px
@@ -21,6 +21,7 @@
 .hero-subtitle {
   font-size: $gamma;
   line-height: 1.2;
+  margin-bottom: 30px;
 
   @media screen and ( max-width: $medium ) {
     font-size: $delta;
