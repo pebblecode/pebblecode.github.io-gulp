@@ -6,7 +6,7 @@
   color: white;
   text-align: center;
   padding-top: 140px;
-  padding-bottom: 10px;
+  padding-bottom: 40px;
 
   @media screen and ( max-width: $medium ) {
     padding: 90px $gutter 10px
@@ -15,13 +15,12 @@
 
 .hero-title {
   @include text-shadow-lrg;
-  margin-bottom: 15px;
+  margin-bottom: 0;
 }
 
 .hero-subtitle {
   font-size: $gamma;
-  line-height: 1.2;
-  margin-bottom: 30px;
+  margin-top: 20px;
 
   @media screen and ( max-width: $medium ) {
     font-size: $delta;

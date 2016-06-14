@@ -12,7 +12,7 @@
     z-index: 3;
   }
 
-  & + & {
+  &:not(.slash-top) + & {
     padding-top: 100px;
   }
 
