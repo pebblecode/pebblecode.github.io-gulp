@@ -10,6 +10,15 @@
   .slash:not(.slash-top) + & {
     padding-top: 100px;
   }
+
+  &:not.slash {
+    padding-bottom: 10px;
+  }
+
+  &.slash-top {
+    padding-top: 30px;
+    padding-bottom: 50px;
+  }
 }
 
 .block-light {
@@ -22,7 +31,6 @@
 
 .block-clear {
   z-index: 0;
-  padding-bottom: 30px;
 
   &.pink-bg {
     background: linear-gradient(-10deg, transparent 40%, $pink 40%), linear-gradient(10deg, transparent 40%, rgba($pink, 0.5) 40%);
@@ -30,6 +38,10 @@
 
   &.blue-bg {
     background: linear-gradient(-10deg, transparent 40%, $blue 40%), linear-gradient(10deg, transparent 40%, rgba($blue, 0.5) 40%);
+  }
+
+  &.blue-dark25-bg {
+    background: linear-gradient(-10deg, transparent 40%, shade($blue, 25%) 40%), linear-gradient(10deg, transparent 40%, rgba(shade($blue, 25%), 0.5) 40%);
   }
 
   &.aqua-bg {
@@ -48,6 +60,10 @@
     opacity: 0.92;
     bottom: 0;
     height: 80%;
+  }
+
+  &.slash {
+    padding-bottom: 30px;
   }
 }
 

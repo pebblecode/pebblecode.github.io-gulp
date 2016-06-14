@@ -39,9 +39,9 @@
     bottom: -15px;
     transition: 0.2s ease-in-out;
 
-      @media screen and ( max-width: $medium ) {
-        display: none;
-      }
+    @media screen and ( max-width: $medium ) {
+      display: none;
+    }
   }
 
 	&::before {
@@ -139,7 +139,7 @@
 
 .card-title {
 	color: $primary;
-	padding: 35px 25px 0;
+	padding: 30px 25px 0;
   transition: 0.2s;
 
   &.slash-top {

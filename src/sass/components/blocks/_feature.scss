@@ -2,15 +2,15 @@
   &.block {
     padding-top: 80px;
     padding-bottom: 80px;
-  }
 
-  @media screen and ( max-width: $medium ) {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    text-align: center;
-
-    .text-right {
+    @media screen and ( max-width: $medium ) {
+      padding-top: 40px;
+      padding-bottom: 40px;
       text-align: center;
+
+      .text-right {
+        text-align: center;
+      }
     }
   }
 
@@ -43,5 +43,56 @@
 
   .btn {
     margin-top: 30px;
+  }
+}
+
+.feature-hero-block {
+  &.block {
+    padding-bottom: 30px;
+  }
+
+  @media screen and ( max-width: $medium ) {
+    [class*="col-"] {
+      width: 100%;
+    }
+  }
+
+  h2 {
+    font-size: $alpha + 10px;
+    margin-bottom: 10px;
+
+    @media screen and ( max-width: $medium ) {
+      font-size: $alpha - 8px;
+    }
+  }
+
+  img {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+
+    @media screen and ( max-width: $medium ) {
+      display: none;
+    }
+  }
+}
+
+.feature-meta {
+  margin-bottom: 20px;
+
+  @media screen and ( max-width: $medium ) {
+    margin-top: -20px;
+  }
+
+  .meta-date {
+    color: rgba(white, 0.6);
+  }
+
+  .meta-location {
+    color: rgba(white, 0.4);
+
+    @media screen and ( max-width: $medium ) {
+      display: block;
+    }
   }
 }
