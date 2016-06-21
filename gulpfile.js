@@ -17,7 +17,7 @@ var path = {
    css: 'src/css/',
 }
 
-var localPort = 4000,
+var localPort = 5000,
        lrPort = 35729;
 
 gulp.task('server', function(){
