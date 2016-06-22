@@ -1,0 +1,91 @@
+.cstudy-hero-block {
+  .client-logo {
+    position: relative;
+    display: table;
+    margin: -30px auto 40px;
+    padding-bottom: 70px;
+    overflow: visible;
+
+    &::before {
+      @include pseudo;
+      transform: translateX(-50%);
+      left: 50%;
+      bottom: 0;
+      width: 100px;
+      height: 8px;
+      border-radius: 5px;
+      background-color: rgba(white, 0.2);
+    }
+  }
+}
+
+.method-list {
+  padding-top: 40px;
+
+  li {
+    max-width: 500px;
+    color: white;
+    box-shadow: $box-shadow;
+    border: 4px solid white;
+    padding: 30px 30px 20px;
+    margin: 15px auto 50px;
+    position: relative;
+    z-index: 2;
+
+    &:not(:last-of-type)::after {
+      @include pseudo;
+      bottom: -54px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba($ink, 0.2);
+      width: 10px;
+      height: 50px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media screen and ( min-width: $medium ) {
+      &:nth-last-of-type(odd) {
+        left: 60px;
+
+        &::after {
+          left: calc(50% - 120px);
+        }
+      }
+
+      &:nth-last-of-type(even) {
+        left: -60px;
+
+        &::after {
+          left: calc(50% + 120px);
+        }
+      }
+    }
+  }
+
+  h4 {
+    @include text-shadow;
+  }
+
+  p {
+    font-size: $epsilon;
+  }
+}
+
+.method-list-count {
+  @include text-shadow;
+  display: table;
+  margin: -60px auto 20px;
+  width: 57px;
+  height: 50px;
+  border-radius: 50%;
+  padding-top: 7px;
+  color: white;
+  font-weight: $font-bold;
+  font-size: $beta - 2px;
+  border: 4px solid white;
+  box-shadow: 0 3px 0 rgba(black, 0.1), $box-shadow;
+  text-align: center;
+}

@@ -1,5 +1,22 @@
+.post-block {
+  .card-title {
+    padding-top: 5px;
+  }
+
+  .card-excerpt {
+    font-size: $epsilon;
+  }
+
+  .card-meta {
+    padding-top: 30px;
+  }
+
+  .post .btn {
+    margin-left: 20px;
+  }
+}
+
 .post {
-  background-color: $grey;
   box-shadow: $box-shadow;
   position: relative;
 
@@ -18,22 +35,6 @@
   &::before,
   &::after {
     display: none;
-  }
-
-  .card-title {
-    padding-top: 5px;
-  }
-
-  .card-excerpt {
-    font-size: $epsilon;
-  }
-
-  .card-meta {
-    padding-top: 30px;
-  }
-
-  .btn {
-    margin-left: 20px;
   }
 }
 

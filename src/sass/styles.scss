@@ -12,14 +12,14 @@
 @import "components/blocks/_base";
 @import "components/blocks/_intro";
 @import "components/blocks/_photo";
-@import "components/blocks/_product";
+@import "components/blocks/_action";
 @import "components/blocks/_feature";
 @import "components/blocks/_team";
 @import "components/blocks/_aside";
 @import "components/blocks/_post";
+@import "components/blocks/_screens";
 @import "components/_buttons";
 @import "components/_tabs";
-@import "components/_hero";
 @import "components/_header";
 @import "components/_footer";
 @import "components/_recruitee";
@@ -29,14 +29,13 @@
 @import "components/_media";
 
 @import "pages/_home";
-@import "pages/_services";
 @import "pages/_contact";
 @import "pages/_work";
-@import "pages/_about";
 @import "pages/_careers";
 @import "pages/_seminar";
 @import "pages/_vertical";
 @import "pages/_video";
+@import "pages/_case-study";
 
 @import "pages/blog/_base";
 @import "pages/blog/_post";

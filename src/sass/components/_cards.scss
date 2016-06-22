@@ -18,6 +18,7 @@
   transition: 0.2s ease-in-out;
 
   @media screen and ( max-width: $medium ) {
+    padding-bottom: $gutter;
     width: 100%;
     display: table;
   }
@@ -113,6 +114,11 @@
   }
 }
 
+
+.card-link {
+  border-bottom: none;
+}
+
 .card-inner {
   position: relative;
   overflow: hidden;
@@ -183,8 +189,11 @@
 
 .card-excerpt {
   padding: 0 25px;
-  margin-bottom: 0;
   color: $ink;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 
   .block-light & {
     color: white;
@@ -200,7 +209,6 @@
     &::after {
       @include pseudo;
       top: 0;
-
       width: 40px;
       height: 5px;
       border-radius: 5px;
@@ -239,5 +247,10 @@
 
   @media screen and ( max-width: $medium ) {
     margin-bottom: 0;
+    padding-bottom: 0;
   }
+}
+
+.events-btn{
+  margin-left: 30px;
 }
