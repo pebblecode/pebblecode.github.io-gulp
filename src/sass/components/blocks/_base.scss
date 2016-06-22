@@ -119,7 +119,7 @@
   border-left: none;
   color: white;
   position: relative;
-  padding-top: 70px;
+  padding: 70px 0 0;
   margin-bottom: 0;
 
   &::before {
@@ -136,7 +136,12 @@
   .quote {
     font-weight: $font-bold;
     font-size: $beta;
+    line-height: 1.3;
     position: relative;
+
+    @media screen and ( max-width: $medium ) {
+      font-size: $gamma;
+    }
 
     &::before,
     &::after {
@@ -163,5 +168,9 @@
   .quote-author {
     margin-top: 40px;
     color: rgba(white, 0.7);
+
+    @media screen and ( max-width: $medium ) {
+      margin: 20px auto 0;
+    }
   }
 }
