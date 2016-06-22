@@ -61,6 +61,16 @@
 }
 
 /* line 2, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_themes.scss */
+.ink-dark5-bg {
+  background-color: #666e7c;
+}
+
+/* line 6, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_themes.scss */
+.ink-dark5-text {
+  color: #666e7c;
+}
+
+/* line 2, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/abstract/_themes.scss */
 .pink-bg {
   background-color: #ed4f7e;
 }
@@ -921,6 +931,11 @@ hr {
 /* line 2, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/shared/_slashes.scss */
 .ink-bg.slash::after, .ink-bg.slash-shadow::after {
   background-color: #6b7482;
+}
+
+/* line 2, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/shared/_slashes.scss */
+.ink-dark5-bg.slash::after, .ink-dark5-bg.slash-shadow::after {
+  background-color: #666e7c;
 }
 
 /* line 2, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/shared/_slashes.scss */
@@ -6884,23 +6899,19 @@ body.casestudy-video {
 
 /* line 22, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
 .method-list {
-  padding-top: 40px;
-}
-
-/* line 25, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
-.method-list li {
-  max-width: 500px;
-  color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  border: 4px solid white;
-  padding: 30px 30px 20px;
-  margin: 15px auto 50px;
+  margin: 80px 40px 60px;
   position: relative;
-  z-index: 2;
 }
 
-/* line 35, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
-.method-list li:not(:last-of-type)::after {
+@media screen and (max-width: 700px) {
+  /* line 22, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+  .method-list {
+    margin: 50px 40px;
+  }
+}
+
+/* line 30, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+.method-list::before {
   content: "";
   overflow: hidden;
   display: block;
@@ -6908,64 +6919,100 @@ body.casestudy-video {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   background-repeat: no-repeat;
-  bottom: -54px;
+  border-radius: 100px;
+  top: 10px;
   left: 50%;
+  width: 60px;
+  height: 110%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background-color: rgba(107, 116, 130, 0.2);
-  width: 10px;
-  height: 50px;
+  background-color: #0b7fac;
+  border: 6px solid #0a749e;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* line 45, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
-.method-list li:last-of-type {
-  margin-bottom: 0;
+@media screen and (max-width: 700px) {
+  /* line 30, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+  .method-list::before {
+    border-width: 4px;
+    left: 15px;
+    width: 50px;
+  }
+}
+
+/* line 50, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+.method {
+  position: relative;
+  width: calc(50% - 80px);
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 700px) {
-  /* line 50, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
-  .method-list li:nth-last-of-type(odd) {
-    left: 60px;
-  }
-  /* line 53, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
-  .method-list li:nth-last-of-type(odd)::after {
-    left: calc(50% - 120px);
-  }
   /* line 58, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
-  .method-list li:nth-last-of-type(even) {
-    left: -60px;
+  .method:nth-of-type(even) {
+    margin-left: calc(50% + 80px);
+    text-align: left;
   }
-  /* line 61, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
-  .method-list li:nth-last-of-type(even)::after {
-    left: calc(50% + 120px);
+  /* line 62, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+  .method:nth-of-type(even) .method-count {
+    left: -120px;
   }
 }
 
-/* line 68, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
-.method-list h4 {
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+@media screen and (max-width: 700px) {
+  /* line 50, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+  .method {
+    width: 100%;
+    padding-left: 75px;
+    margin-bottom: 60px;
+    text-align: left;
+  }
+  /* line 74, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+  .method:last-of-type {
+    margin-bottom: 0;
+  }
 }
 
-/* line 72, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
-.method-list p {
+/* line 79, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+.method h4 {
+  line-height: 1.1;
+}
+
+/* line 83, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+.method p {
   font-size: 18px;
 }
 
-/* line 77, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
-.method-list-count {
+/* line 88, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+.method-count {
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.15);
+  top: -15px;
+  right: -120px;
+  position: absolute;
+  background-color: #0ea2dc;
   display: table;
-  margin: -60px auto 20px;
-  width: 57px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
-  padding-top: 7px;
+  padding-top: 17px;
   color: white;
   font-weight: 700;
-  font-size: 30px;
-  border: 4px solid white;
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.2);
+  font-size: 44px;
+  line-height: 1;
+  background-color: #0ea2dc;
+  border: 6px solid #0c90c4;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  /* line 88, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/_case-study.scss */
+  .method-count {
+    top: -15px;
+    left: -25px;
+  }
 }
 
 /* line 1, /Users/peter/Repos/pebblecode.github.io-gulp/src/sass/pages/blog/_base.scss */

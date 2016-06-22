@@ -43,30 +43,30 @@
     </div>
   </section>
 
-  <section class="intro-block block grey-bg slash-shadow">
+  <section class="process-block block grey-bg slash-shadow">
     <div class="block-inner grid">
-      <h2>The Method</h2>
+      <h2 class="text-center">The Method</h2>
       <ul class="method-list">
-        <li class="purple-bg">
-          <span class="purple-dark5-bg method-list-count">1</span>
-          <h4>Hold workshops with stakeholders</h4>
+        <li class="method">
+          <span class="method-count">1</span>
+          <h4 class="blue-text">Hold workshops with stakeholders</h4>
           <p>To better understand user needs and workflow, we held several workshops with stakeholders.</p>
         </li>
-        <li class="aqua-bg">
-          <span class="aqua-dark5-bg method-list-count">2</span>
-          <h4>Rapid Prototyping</h4>
+        <li class="method">
+          <span class="method-count">2</span>
+          <h4 class="blue-text">Rapid Prototyping</h4>
           <p>We rapidly produced lo- and hi-fi prototypes with the findings of our user research.</p>
         </li>
-        <li class="pink-bg">
-          <span class="pink-dark5-bg method-list-count">3</span>
-          <h4>Development of a fast, time-saving app</h4>
+        <li class="method">
+          <span class="method-count">3</span>
+          <h4 class="blue-text">Development of a fast, time-saving app</h4>
           <p>Since multiple data sources are used by the analysts, pebble developers worked with AZ developers to create a highly intuitive app that consolidates multiple sources into one interface.</p>
         </li>
       </ul>
     </div>
   </section>
 
-  <section class="feature-block block blue-bg block-light">
+  <section id="results" class="feature-block block ink-bg block-light">
     <div class="block-inner block-inner-right grid">
       <div class="col-1-2">
         <img src="/img/illustrations/chart.svg" alt="">
@@ -79,11 +79,11 @@
     </div>
   </section>
 
-  <aside class="screens-block block blue-bg ">
+  <aside class="screens-block block ink-bg">
     <img src="img/case-study/3.png">
   </aside>
 
-  <section class="intro-block block blue-dark5-bg block-light slash-shadow slash-right slash-top">
+  <section class="intro-block block ink-dark5-bg block-light slash-shadow slash-right slash-top">
     <div class="block-inner grid">
       <h2>The future</h2>
       <p>Efficiency from start to finish - that means timely decisions and more value for shareholders.</p>
@@ -93,9 +93,7 @@
       </blockquote>
     </div>
   </section>
-
-  <section class=" blue-dark5-bg slash-shadow">
-  </section>
+  <section class="ink-dark5-bg slash-shadow"></section>
 
   <section class="photo-block">
     <div class="photo" style="background-image: url(/img/case-study/2.jpg)"></div>
@@ -103,7 +101,7 @@
 
   <section class="action-block intro-block block slash-shadow slash-top slash-right">
     <div class="block-inner grid">
-      <img class="action-img brain-action-img" src="/img/illustrations/brain.svg" alt="">
+      <img class="action-img brain-action-img" src="/img/illustrations/brain.png" alt="">
       <h2 class="pink-text">Want to make your team more efficient? pebble {code} has you covered.</h2>
       <a class="btn btn-lrg btn-center btn-icon btn-mail">Email us</a>
       <a class="btn btn-lrg btn-center btn-icon btn-phone">Call us</a>
@@ -130,5 +128,28 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
 
+  <script>
+  var headerContainer = $('.gbl-head');
+  if ($(headerContainer).length > 0) {
+    var results;
+
+    var scrollPositions = function () {
+      results = $('#results');
+    };
+
+    var headerBG = function () {
+      var windowTop = $(window).scrollTop();
+      if (windowTop > results.offset().top - 200 || results.offset().bottom) {
+        headerContainer.css({'background-color':'#6b7482'});
+      } else {
+        headerContainer.removeAttr("style");
+      }
+    };
+
+    $(window).resize(scrollPositions).scroll(headerBG);
+    scrollPositions();
+    headerBG();
+  }
+  </script>
 </body>
 </html>
